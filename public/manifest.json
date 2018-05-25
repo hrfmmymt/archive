@@ -1,0 +1,20 @@
+{
+  "short_name": "archive",
+  "name": "archive",
+  "icons": [
+    {
+      "src": "/img/icon_192x192.jpg",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/icon_512x512.jpg",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "display": "standalone",
+  "theme_color": "#fff",
+  "background_color": "#fff",
+  "start_url": "/?launch=homescreen"
+}

@@ -1,0 +1,45 @@
+{
+  "private": true,
+  "name": "archive",
+  "author": "hrfmmymt",
+  "version": "0.0.0",
+  "license": "MIT",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "webpack": "webpack",
+    "build": "npm-run-all -p webpack md meta valid-path versioning -s img-resize img-min",
+    "dev": "firebase serve -p 4567 --only hosting,functions",
+    "prod": "firebase deploy",
+    "eslint": "eslint public/src/ui/blog/*.js",
+    "md": "node ./utils/md-split.js",
+    "meta": "node ./utils/write-MetaTagUtilJs.js",
+    "valid-path": "node ./utils/write-ArticlePathValidatorJs.js",
+    "versioning": "node ./utils/write-BuildVersionJs.js",
+    "img-min": "imagemin ./public/img/post/*.{jpg,png} --out-dir=./public/img/post",
+    "img-resize": "node ./utils/img-resize.js",
+    "gen-icons": "node ./utils/gen-icons.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.47",
+    "@babel/preset-env": "^7.0.0-beta.47",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.3",
+    "babel-loader": "^8.0.0-beta.0",
+    "babel-plugin-transform-custom-element-classes": "^0.1.0",
+    "babel-polyfill": "^6.26.0",
+    "eslint": "^4.19.1",
+    "imagemin-cli": "^3.0.0",
+    "jimp": "^0.2.28",
+    "md-splitter": "^1.0.0",
+    "npm-run-all": "^4.1.3",
+    "uglify-js": "^3.3.27",
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.4"
+  },
+  "dependencies": {
+    "firebase-admin": "^5.12.1",
+    "firebase-functions": "^1.0.2"
+  }
+}
