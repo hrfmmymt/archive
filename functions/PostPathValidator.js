@@ -3,7 +3,7 @@
       class PostPathValidator {
         constructor(path) {
           this.urlSet = new Set()
-          this.urlSet.add('/post/20180523'); this.urlSet.add('/post/0');
+          this.urlSet.add('/post/20180526'); this.urlSet.add('/post/20180523'); this.urlSet.add('/post/0');
           this.path = path
         }
         isValid() {

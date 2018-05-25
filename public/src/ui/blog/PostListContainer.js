@@ -29,7 +29,7 @@ export class PostListContainer extends App {
       fetch('/json/posts.json', { credentials: 'include' }).then(res => {
         res.json().then(json => {
           const postList = []
-          json.posts.forEach(post => {
+          json.posts.map((post,index) => {
             const template = `<post-list
               data-format="${
                 post.format
@@ -44,8 +44,9 @@ export class PostListContainer extends App {
               data-link="${post.link}"
               data-imgsrc="${
                 post.imgsrc
-              }">
-            </post-list>`
+              }"
+              class=${index === 0 ? 'headline' : ''}
+              ></post-list>`
             postList.push(template)
           })
           const dummy = document.getElementById('dummyBody')
