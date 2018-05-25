@@ -1,7 +1,7 @@
 const CONST = require('../constants.js')
 const MetaTagUtil = require('../MetaTagUtil.js')
 
-class ArticleTemplateBuilder {
+class PostTemplateBuilder {
   constructor(data) {
     this.compatMode = data.compatMode
     this.postId = data.path.match(/^\/post\/([a-zA-Z0-9-]+)/)[1]
@@ -23,53 +23,66 @@ class ArticleTemplateBuilder {
       <link rel="preload" href="/posts/${
         this.postId
       }.md" as="fetch" crossorigin=use-credentials></link>
+      <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
       ${this.getScripts(this.compatMode)}
       <style>
+        * {
+          box-sizing: border-box;
+        }
+
         html, body {
           padding: 0px;
           margin: 0px;
           width: 100%;
         }
+
+        wrapper {
+          display: block;
+          width: 100%;
+          padding: 0 2rem;
+        }
+
         #dummyHeader {
         }
-        #dummyArticle {
+
+        #dummyPost {
         }
-        #dummyArticle .dummyTitle {
+
+        #dummyPost .dummyTitle {
           height:1rem;
           background-color:#ddd;
         }
-        #dummyArticle .dummySubTitle {
+        #dummyPost .dummySubTitle {
           height:1rem;
           background-color:#ddd;
         }
-        #dummyArticle .dummyDate {
+        #dummyPost .dummyDate {
           height:1rem;
           background-color:#ddd;
         }
-        #dummyArticle .dummySpacer {
+        #dummyPost .dummySpacer {
           height: 1rem;
         }
-        #dummyArticle .dummyLine {
+        #dummyPost .dummyLine {
           height: 1rem;
           background-color:#ddd;
         }
-        #dummyArticle .dummyImg {
+        #dummyPost .dummyImg {
           background-color: #ddd;
         }
         @media (max-width: 699px) {
           #dummyHeader {
               height: 1rem;
           }
-          #dummyArticle {
+          #dummyPost {
           }
         }
       </style>
       <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-63868653-2"></script>
       <noscript>noscript</noscript>
-      <background></background>
-      <global-header></global-header>
+      <wrapper>
       <div id="dummyHeader"></div>
-      <div id="dummyArticle">
+      <div id="dummyPost">
         <div class="dummyTitle"></div>
         <div class="dummySubTitle"></div>
         <div class="dummyDate"></div>
@@ -93,6 +106,7 @@ class ArticleTemplateBuilder {
         <div class="dummyLine"></div>
       </div>
       <my-post></my-post>
+      </wrapper>
       <script>
         window.addEventListener("load", _ => {
           if ('serviceWorker' in navigator) {
@@ -111,4 +125,4 @@ class ArticleTemplateBuilder {
   }
 }
 
-module.exports = ArticleTemplateBuilder
+module.exports = PostTemplateBuilder

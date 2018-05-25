@@ -1,8 +1,8 @@
 import { _PostList } from './PostList.js'
 import { App } from './App.js'
 
-const COMPONENT_NAME = 'post-container'
-export class PostContainer extends App {
+const COMPONENT_NAME = 'post-list-container'
+export class PostListContainer extends App {
   getComponentName() {
     return COMPONENT_NAME
   }
@@ -14,15 +14,17 @@ export class PostContainer extends App {
   getStyle() {
     return `
       :host {
+        display: block;
+        width: 100%;
       }
     `
   }
 
   getTemplate() {
-    return this.fetchPostContainer()
+    return this.fetchPostListContainer()
   }
 
-  fetchPostContainer() {
+  fetchPostListContainer() {
     return new Promise(resolve => {
       fetch('/json/posts.json', { credentials: 'include' }).then(res => {
         res.json().then(json => {
@@ -50,7 +52,6 @@ export class PostContainer extends App {
           if (dummy) dummy.style.display = 'none'
           resolve(`
             <section>
-              <h2>posts</h2>
               <div class="list">
                 ${postList.join('')}
               </div>
@@ -62,4 +63,4 @@ export class PostContainer extends App {
   }
 }
 
-customElements.define(COMPONENT_NAME, PostContainer)
+customElements.define(COMPONENT_NAME, PostListContainer)

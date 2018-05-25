@@ -9,8 +9,7 @@ export class GlobalHeader extends App {
 
   connectedCallback() {
     const data = {
-      blogTitle: 'archive',
-      name: 'hrfmmymt'
+      blogTitle: 'archive'
     }
     super.render(data)
   }
@@ -18,8 +17,16 @@ export class GlobalHeader extends App {
   getStyle() {
     return `
       :host {
-        margin:0 auto;
-        cursor: pointer;
+        display: block;
+      }
+
+      h1 {
+        font-size: 3rem;
+        font-family: 'Poiret One', cursive;
+      }
+
+      a {
+        text-decoration: none;
       }
     `
   }
@@ -30,11 +37,6 @@ export class GlobalHeader extends App {
     return `
       <header>
         <h1><a href="/">${data.blogTitle}</a></h1>
-        <div class="header-profile">
-          <div class="profile-description">
-            <div class="name">${data.name}</div>
-          </div>
-        </div>
       </header>
     `
   }

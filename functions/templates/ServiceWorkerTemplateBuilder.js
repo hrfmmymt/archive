@@ -1,5 +1,5 @@
 const CONST = require('../constants.js')
-const ArticlePathValidator = require('../ArticlePathValidator')
+const PostPathValidator = require('../PostPathValidator')
 const BuildVersion = require('../BuildVersion')
 
 class ServiceWorkerTemplateBuilder {
@@ -17,7 +17,7 @@ class ServiceWorkerTemplateBuilder {
       this.URLSet.add('/offline')
     }
     this.addPageURLSet = _ => {
-      const pathSet = new ArticlePathValidator().getAllPathSet()
+      const pathSet = new PostPathValidator().getAllPathSet()
       ;[...pathSet].filter(path => path.startsWith('/post/')).map(path => {
         this.URLSet.add(`${path.replace('post', 'posts')}.md`)
       })

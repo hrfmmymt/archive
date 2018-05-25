@@ -28,14 +28,14 @@ module.exports = {
       MODERN_BROWSER: `
         <!-- Modern Browser -->
         <link rel="preload" href="/src/ui/blog/GlobalHeader.js" as="script" crossorigin>
-        <link rel="preload" href="/src/ui/blog/PostContainer.js" as="script" crossorigin>
+        <link rel="preload" href="/src/ui/blog/PostListContainer.js" as="script" crossorigin>
         <link rel="preload" href="/src/ui/blog/PostList.js" as="script" crossorigin>
         <link rel="preload" href="/src/ui/blog/Profile.js" as="script" crossorigin>
         <link rel="preload" href="/src/ui/blog/GlobalFooter.js" as="script" crossorigin>
         <link rel="preload" href="/src/ui/blog/App.js" as="script" crossorigin>
         <link rel="preload" href="/src/ui/blog/Img.js" as="script" crossorigin>
         <script type="module" src="/src/ui/blog/GlobalHeader.js" crossorigin></script>
-        <script type="module" src="/src/ui/blog/PostContainer.js" crossorigin></script>
+        <script type="module" src="/src/ui/blog/PostListContainer.js" crossorigin></script>
         <script type="module" src="/src/ui/blog/Profile.js" crossorigin></script>
         <script type="module" src="/src/ui/blog/GlobalFooter.js" crossorigin></script>
       `,
@@ -43,7 +43,7 @@ module.exports = {
         <!-- Modern Safari -->
         <script src="/src/lib/intersection-observer.js" defer></script>
         <script type="module" src="/src/ui/blog/GlobalHeader.js"></script>
-        <script type="module" src="/src/ui/blog/PostContainer.js"></script>
+        <script type="module" src="/src/ui/blog/PostListContainer.js"></script>
         <script type="module" src="/src/ui/blog/Profile.js"></script>
         <script type="module" src="/src/ui/blog/GlobalFooter.js"></script>
       `,
@@ -101,9 +101,23 @@ module.exports = {
       <!DOCTYPE html>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+      <style>
+        html, body {
+          padding: 0px;
+          margin: 0px;
+        }
+        wrapper {
+          display: block;
+          width: 100%;
+          padding: 0 2rem;
+        }
+      </style>
+      <wrapper>
       <div class="message">
         <h1>404</h1>
       </div>
+      </wrapper>
     `
   }
 }

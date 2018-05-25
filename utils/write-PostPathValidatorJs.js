@@ -13,7 +13,7 @@ fs.readFile('./public/json/posts.json', function(error, data) {
   }
   const scriptTemplate = render`
       /** Auto generated module */
-      class ArticlePathValidator {
+      class PostPathValidator {
         constructor(path) {
           this.urlSet = new Set()
           ${postList}
@@ -26,7 +26,7 @@ fs.readFile('./public/json/posts.json', function(error, data) {
           return this.urlSet
         }
       }
-      module.exports = ArticlePathValidator
+      module.exports = PostPathValidator
     `
-  fs.writeFileSync('./functions/ArticlePathValidator.js', scriptTemplate)
+  fs.writeFileSync('./functions/PostPathValidator.js', scriptTemplate)
 })

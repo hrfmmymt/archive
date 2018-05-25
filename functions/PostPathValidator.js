@@ -1,6 +1,6 @@
 
       /** Auto generated module */
-      class ArticlePathValidator {
+      class PostPathValidator {
         constructor(path) {
           this.urlSet = new Set()
           this.urlSet.add('/post/20180523'); this.urlSet.add('/post/0');
@@ -13,5 +13,5 @@
           return this.urlSet
         }
       }
-      module.exports = ArticlePathValidator
+      module.exports = PostPathValidator
     

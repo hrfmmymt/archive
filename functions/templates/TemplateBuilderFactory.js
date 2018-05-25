@@ -2,8 +2,8 @@ const useragent = require('useragent')
 const fetch = require('node-fetch')
 const CONST = require('../constants')
 const TopTemplateBuilder = require('./TopTemplateBuilder')
-const ArticleTemplateBuilder = require('./ArticleTemplateBuilder')
-const ArticlePathValidator = require('../ArticlePathValidator')
+const PostTemplateBuilder = require('./PostTemplateBuilder')
+const PostPathValidator = require('../PostPathValidator')
 const ServiceWorkerTemplateBuilder = require('./ServiceWorkerTemplateBuilder')
 
 class TemplateBuilderFactory {
@@ -73,8 +73,8 @@ class TemplateBuilderFactory {
     }
     if (this.path.startsWith('/post/')) {
       if (this.isBot) return this.getRendertronPromise()
-      if (new ArticlePathValidator(this.path).isValid()) {
-        return new ArticleTemplateBuilder(this.templateData).getTemplate()
+      if (new PostPathValidator(this.path).isValid()) {
+        return new PostTemplateBuilder(this.templateData).getTemplate()
       }
       return null
     }

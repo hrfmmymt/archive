@@ -27,23 +27,33 @@ class TopTemplateBuilder {
       <meta name="twitter:creator" content="hrfmmymt" />
       <link rel="manifest" href="/manifest.json">
       <link rel="preload" href="/json/posts.json" as="fetch" crossorigin=use-credentials></link>
+      <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
       ${this.getScripts(this.compatMode)}
       <style>
+        * {
+          box-sizing: border-box;
+        }
         html, body {
           padding: 0px;
           margin: 0px;
           width: 100%;
           height: 100%;
         }
+        wrapper {
+          display: block;
+          width: 100%;
+          padding: 0 2rem;
+        }
       </style>
       <noscript>noscript</noscript>
-      <background></background>
+      <wrapper>
       <global-header></global-header>
       <div id="dummyHeader"></div>
       <div id="dummyBody"></div>
-      <post-container></post-container>
+      <post-list-container></post-list-container>
       <my-profile></my-profile>
       <global-footer></global-footer>
+      </wrapper>
       <script>
         window.addEventListener("load", _ => {
           if ('serviceWorker' in navigator) {
