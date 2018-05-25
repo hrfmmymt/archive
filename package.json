@@ -18,16 +18,22 @@
     "versioning": "node ./utils/write-BuildVersionJs.js",
     "img-min": "imagemin ./public/img/post/*.{jpg,png} --out-dir=./public/img/post",
     "img-resize": "node ./utils/img-resize.js",
-    "gen-icons": "node ./utils/gen-icons.js"
+    "gen-icons": "node ./utils/gen-icons.js",
+    "lib": "npm-run-all -p cp-io cp-fe cp-wc",
+    "cp-io": "cpy ./node_modules/intersection-observer/intersection-observer.js ./public/src/lib",
+    "cp-fe": "cpy ./node_modules/whatwg-fetch/fetch.js ./public/src/lib",
+    "cp-wc": "cpy ./node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js ./public/src/lib"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.47",
     "@babel/preset-env": "^7.0.0-beta.47",
+    "@webcomponents/webcomponentsjs": "^2.0.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.3",
     "babel-loader": "^8.0.0-beta.0",
     "babel-plugin-transform-custom-element-classes": "^0.1.0",
     "babel-polyfill": "^6.26.0",
+    "cpy-cli": "^1.0.1",
     "eslint": "^4.19.1",
     "imagemin-cli": "^3.0.0",
     "jimp": "^0.2.28",
@@ -40,6 +46,8 @@
   },
   "dependencies": {
     "firebase-admin": "^5.12.1",
-    "firebase-functions": "^1.0.2"
+    "firebase-functions": "^1.0.2",
+    "intersection-observer": "^0.5.0",
+    "whatwg-fetch": "^2.0.4"
   }
 }

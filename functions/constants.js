@@ -51,7 +51,7 @@ module.exports = {
         <!-- ES5 compatible -->
         <script src="/src/lib/fetch.js" defer></script>
         <script src="/src/lib/intersection-observer.js" defer></script>
-        <script src="/src/lib/webcomponents-lite.js" defer></script>
+        <script src="/src/lib/webcomponents-bundle.js" defer></script>
         <script src="/src/ui/blog/bundle/common.bundle.js" defer></script>
         <script src="/src/ui/blog/bundle/top.bundle.js" defer></script>
       `
@@ -90,7 +90,7 @@ module.exports = {
         <!-- ES5 compatible -->
         <script src="/src/lib/fetch.js" defer></script>
         <script src="/src/lib/intersection-observer.js" defer></script>
-        <script src="/src/lib/webcomponents-lite.js" defer></script>
+        <script src="/src/lib/webcomponents-bundle.js" defer></script>
         <script src="/src/ui/blog/bundle/common.bundle.js" defer></script>
         <script src="/src/ui/blog/bundle/post.bundle.js" defer></script>
       `
