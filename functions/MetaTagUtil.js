@@ -3,7 +3,7 @@
       class MetaTagUtil {
         constructor() {
           this.metaMap = new Map();
-          this.metaMap.set("/post/20180526", {title:'asfdasfadsfasf',subtitle:'sdfuahewoufin',imgsrc:''});this.metaMap.set("/post/20180523", {title:'[title]【バニラJS】でブログを作ろう！',subtitle:'[subtitle]高収入バニラJS！',imgsrc:'/img/post/1-1.jpg'});this.metaMap.set("/post/0", {title:'[title]トンネルポッポー！',subtitle:'[subtitle]大きな声で、ぽっぽー！',imgsrc:''});
+          this.metaMap.set("/post/20180526", {title:'asfdasfadsfasf',subtitle:'sdfuahewoufin',imgsrc:'/img/post/fish.png'});this.metaMap.set("/post/20180523", {title:'[title]【バニラJS】でブログを作ろう！',subtitle:'[subtitle]高収入バニラJS！',imgsrc:'/img/post/1-1.jpg'});this.metaMap.set("/post/0", {title:'[title]トンネルポッポー！',subtitle:'[subtitle]大きな声で、ぽっぽー！',imgsrc:''});
         }
         
         getMetaTag(path) {

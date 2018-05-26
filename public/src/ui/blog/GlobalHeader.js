@@ -20,12 +20,13 @@ export class GlobalHeader extends App {
         display: block;
       }
 
-      h1 {
+      :host h1 {
         font-size: 3rem;
         font-family: 'Poiret One', cursive;
       }
 
-      a {
+      :host a {
+        color: #000;
         text-decoration: none;
       }
     `

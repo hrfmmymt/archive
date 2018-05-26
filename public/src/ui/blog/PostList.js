@@ -25,34 +25,36 @@ export class _PostList extends App {
         margin-top:10px;
         cursor: pointer;
       }
+
+      :host a {
+        display: block;
+      }
+
+      :host li {
+        list-style-type: none;
+      }
     `
   }
 
   getTemplate(data) {
     return `
       <a href=${this.dataLink}>
-        <dl class="${
+        <section class="${
           data.format === 'large' ? 'img-wrapper-large' : 'img-wrapper-small'
         }">
-          <dt>
-            ${data.title}
-            ${data.imgsrc && `
-              <archive-img
-                data-src="${data.imgsrc}",
-                data-alt="image ${data.title}",
-                data-width="${data.format === 'large' ? '2' : '1'}",
-                data-height="${data.format === 'large' ? '1' : '1'}",
-                data-layout="${data.format === 'large' ? '' : 'fixed-layout'}"
-              ></archive-img>`
-            }
-          </dt>
-          <dd>
-            <ul>
-              <li class="subtitle">${data.subtitle}</li>
-              <li class="date">${data.date}</li>
-            </ul>
-          </dd>
-        </dl>
+          <h3>${data.title}</h3>
+          ${data.imgsrc && `
+            <archive-img
+              data-src="${data.imgsrc}",
+              data-alt="image ${data.title}",
+              data-width="${data.format === 'large' ? '2' : '1'}",
+              data-height="${data.format === 'large' ? '1' : '1'}",
+              data-layout="${data.format === 'large' ? '' : 'fixed-layout'}"
+            ></archive-img>`
+          }
+          <h4>${data.subtitle}</h4>
+          <time>${data.date}</time>
+        </section>
       </a>
     `
   }

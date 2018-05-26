@@ -10,15 +10,11 @@ export class _Img extends App {
     this.src = this.getAttribute('data-src')
     this.alt = this.getAttribute('data-alt')
     this.layout = this.getAttribute('data-layout')
-    this.borderRadius = this.getAttribute('data-border-radius')
-      ? this.getAttribute('data-border-radius')
-      : '0'
     this.randomID = `IMG${parseInt(Math.random() * 1000)}`
     const data = {
       randomId: this.randomID,
       height: this.getAttribute('data-height'),
       width: this.getAttribute('data-width'),
-      borderRadius: this.borderRadius,
       backgroundColor: this.getAttribute('data-background-color')
         ? this.getAttribute('data-background-color')
         : '#222'
@@ -32,17 +28,23 @@ export class _Img extends App {
         display: block;
         width: 100%;
       }
+
+      :host picture {
+        display: block;
+      }
+
       .image-${data.randomId} {
         width: 100%;
         background-color: ${data.backgroundColor};
       }
+
       .image-${data.randomId} img {
       }
     `
   }
 
   getTemplate(data) {
-    return `<div id=${data.randomId} class="image-${data.randomId}"></div>`
+    return `<picture id=${data.randomId} class="image-${data.randomId}"></picture>`
   }
 
   addEvents() {
@@ -50,9 +52,6 @@ export class _Img extends App {
       const img = document.createElement('img')
       img.src = this.src
       img.alt = this.alt
-      if (this.borderRadius) {
-        img.style.borderRadius = this.borderRadius
-      }
       if (this.layout === 'fixed-height') {
         img.style.height = '100%'
       } else {
