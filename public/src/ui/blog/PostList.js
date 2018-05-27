@@ -23,7 +23,7 @@ export class _PostList extends App {
     return `
       :host {
         display: block;
-        margin: 2% auto;
+        margin: 4% auto 2%;
         cursor: pointer;
       }
 
@@ -35,7 +35,7 @@ export class _PostList extends App {
       }
 
       :host a.headline {
-        margin-bottom: 4%;
+        margin-bottom: 8%;
         padding: 0;
         border-bottom: none;
       }
@@ -48,6 +48,7 @@ export class _PostList extends App {
       :host a.headline archive-img {
         order: 0;
         align-self: stretch;
+        margin-right: 2%;
         max-width: 65%;
       }
 
