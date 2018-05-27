@@ -51,9 +51,9 @@ class TopTemplateBuilder {
       <div id="dummyHeader"></div>
       <div id="dummyBody"></div>
       <post-list-container></post-list-container>
+      </wrapper>
       <my-profile></my-profile>
       <global-footer></global-footer>
-      </wrapper>
       <script>
         window.addEventListener("load", _ => {
           if ('serviceWorker' in navigator) {

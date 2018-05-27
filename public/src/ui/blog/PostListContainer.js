@@ -16,6 +16,8 @@ export class PostListContainer extends App {
       :host {
         display: block;
         width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
       }
     `
   }
@@ -37,7 +39,7 @@ export class PostListContainer extends App {
               data-date="${post.date}"
               data-link="${post.link}"
               data-imgsrc="${post.imgsrc}"
-              class=${index === 0 ? 'headline' : ''}
+              data-class=${index === 0 ? 'headline' : ''}
               ></post-list>`
             postList.push(template)
           })

@@ -16,6 +16,7 @@ export class Profile extends App {
   getStyle() {
     return `
       :host {
+        background-color: #f8f9fa;
       }
     `
   }

@@ -141,15 +141,18 @@ export class MarkdownParser {
       parseStrong() {
         return this.createNewRow(/\*\*(.+?)\*\*/g, `<b>$1</b>`)
       }
+
       parseEmphasis() {
         return this.createNewRow(/\*(.+?)\*/g, `<em>$1</em>`)
       }
+
       parseLink() {
         return this.createNewRow(
           /\[(.+?)\]\((https?:\/\/.+?)\)/g,
           `<a href="$2" target="_blank">$1</a>`
         )
       }
+
       parseCode() {
         return this.createNewRow(/`(.+?)`/g, `<code>$1</code>`)
       }

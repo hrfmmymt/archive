@@ -105,6 +105,7 @@ class PostTemplateBuilder {
         <div class="dummyLine"></div>
         <div class="dummyLine"></div>
       </div>
+      <global-header></global-header>
       <my-post></my-post>
       </wrapper>
       <script>

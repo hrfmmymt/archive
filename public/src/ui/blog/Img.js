@@ -44,7 +44,9 @@ export class _Img extends App {
   }
 
   getTemplate(data) {
-    return `<picture id=${data.randomId} class="image-${data.randomId}"></picture>`
+    return `<picture id=${data.randomId} class="image-${
+      data.randomId
+    }"></picture>`
   }
 
   addEvents() {
