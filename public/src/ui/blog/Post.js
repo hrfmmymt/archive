@@ -66,7 +66,6 @@ export class Post extends App {
         res.text().then(text => {
           const markup = new MarkdownParser(text).getMarkUp()
           this.shadowRoot.getElementById('show-more').innerHTML = markup
-          document.body.appendChild(document.createElement('my-profile'))
           document.body.appendChild(document.createElement('global-footer'))
         })
       })

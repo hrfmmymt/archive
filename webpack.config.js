@@ -6,8 +6,7 @@ module.exports = {
     common: [
       'babel-polyfill',
       './public/src/ui/blog/GlobalHeader.js',
-      './public/src/ui/blog/GlobalFooter.js',
-      './public/src/ui/blog/Profile.js'
+      './public/src/ui/blog/GlobalFooter.js'
     ],
     top: ['./public/src/ui/blog/PostListContainer.js'],
     post: ['./public/src/ui/blog/Post.js']

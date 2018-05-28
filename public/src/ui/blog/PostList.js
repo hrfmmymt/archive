@@ -23,7 +23,7 @@ export class _PostList extends App {
     return `
       :host {
         display: block;
-        margin: 4% auto 2%;
+        margin: 4% auto;
         cursor: pointer;
       }
 
@@ -100,7 +100,6 @@ export class _PostList extends App {
   }
 
   getTemplate(data) {
-    console.log(this)
     return `
       <a href=${this.dataLink} class="${data.className && data.className}">
         ${data.imgsrc && `

@@ -30,13 +30,11 @@ module.exports = {
         <link rel="preload" href="/src/ui/blog/GlobalHeader.js" as="script" crossorigin>
         <link rel="preload" href="/src/ui/blog/PostListContainer.js" as="script" crossorigin>
         <link rel="preload" href="/src/ui/blog/PostList.js" as="script" crossorigin>
-        <link rel="preload" href="/src/ui/blog/Profile.js" as="script" crossorigin>
         <link rel="preload" href="/src/ui/blog/GlobalFooter.js" as="script" crossorigin>
         <link rel="preload" href="/src/ui/blog/App.js" as="script" crossorigin>
         <link rel="preload" href="/src/ui/blog/Img.js" as="script" crossorigin>
         <script type="module" src="/src/ui/blog/GlobalHeader.js" crossorigin></script>
         <script type="module" src="/src/ui/blog/PostListContainer.js" crossorigin></script>
-        <script type="module" src="/src/ui/blog/Profile.js" crossorigin></script>
         <script type="module" src="/src/ui/blog/GlobalFooter.js" crossorigin></script>
       `,
       MODERN_SAFARI: `
@@ -44,7 +42,6 @@ module.exports = {
         <script src="/src/lib/intersection-observer.js" defer></script>
         <script type="module" src="/src/ui/blog/GlobalHeader.js"></script>
         <script type="module" src="/src/ui/blog/PostListContainer.js"></script>
-        <script type="module" src="/src/ui/blog/Profile.js"></script>
         <script type="module" src="/src/ui/blog/GlobalFooter.js"></script>
       `,
       ES5_COMPAT: `
@@ -61,7 +58,6 @@ module.exports = {
         <!-- Modern Browser -->
         <link rel="preload" href="/src/ui/blog/GlobalHeader.js" as="script" crossorigin>
         <link rel="preload" href="/src/ui/blog/Post.js" as="script" crossorigin>
-        <link rel="preload" href="/src/ui/blog/Profile.js" as="script" crossorigin>
         <link rel="preload" href="/src/ui/blog/GlobalFooter.js" as="script" crossorigin>
         <link rel="preload" href="/src/ui/blog/App.js" as="script" crossorigin>
         <link rel="preload" href="/src/ui/blog/Img.js" as="script" crossorigin>
@@ -75,7 +71,6 @@ module.exports = {
         <link rel="preload" href="/src/ui/blog/SocialShare.js" as="script" crossorigin>
         <script type="module" src="/src/ui/blog/GlobalHeader.js" crossorigin></script>
         <script type="module" src="/src/ui/blog/Post.js" crossorigin></script>
-        <script type="module" src="/src/ui/blog/Profile.js" crossorigin></script>
         <script type="module" src="/src/ui/blog/GlobalFooter.js" crossorigin></script>
       `,
       MODERN_SAFARI: `
@@ -83,7 +78,6 @@ module.exports = {
         <script src="/src/lib/intersection-observer.js" defer></script>
         <script type="module" src="/src/ui/blog/GlobalHeader.js"></script>
         <script type="module" src="/src/ui/blog/Post.js"></script>
-        <script type="module" src="/src/ui/blog/Profile.js"></script>
         <script type="module" src="/src/ui/blog/GlobalFooter.js"></script>
       `,
       ES5_COMPAT: `

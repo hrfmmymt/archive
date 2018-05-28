@@ -52,7 +52,6 @@ class TopTemplateBuilder {
       <div id="dummyBody"></div>
       <post-list-container></post-list-container>
       </wrapper>
-      <my-profile></my-profile>
       <global-footer></global-footer>
       <script>
         window.addEventListener("load", _ => {

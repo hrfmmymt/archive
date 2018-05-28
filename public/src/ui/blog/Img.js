@@ -29,10 +29,6 @@ export class _Img extends App {
         width: 100%;
       }
 
-      :host picture {
-        display: block;
-      }
-
       .image-${data.randomId} {
         width: 100%;
         background-color: ${data.backgroundColor};
@@ -44,9 +40,9 @@ export class _Img extends App {
   }
 
   getTemplate(data) {
-    return `<picture id=${data.randomId} class="image-${
+    return `<div id=${data.randomId} class="image-${
       data.randomId
-    }"></picture>`
+    }"></div>`
   }
 
   addEvents() {
