@@ -3,7 +3,7 @@
       class MetaTagUtil {
         constructor() {
           this.metaMap = new Map();
-          this.metaMap.set("/post/20180526", {title:'preact-cli でポートフォリオサイトを作った',subtitle:'subtitle',imgsrc:'/img/post/fish.png'});this.metaMap.set("/post/20180523", {title:'バニラ JS でブログを作ろう！',subtitle:'高収入バニラJS！',imgsrc:'/img/post/1-1.jpg'});this.metaMap.set("/post/0", {title:'トンネルポッポー！',subtitle:'大きな声で、ぽっぽー！',imgsrc:''});
+          this.metaMap.set("/post/20180526", {title:'preact-cli でポートフォリオサイトを作った',subtitle:'subtitle',imgsrc:'/img/post/any.jpg'});this.metaMap.set("/post/20180523", {title:'バニラ JS でブログを作ろう！',subtitle:'高収入バニラJS！',imgsrc:'/img/post/1-1.jpg'});this.metaMap.set("/post/0", {title:'トンネルポッポー！',subtitle:'大きな声で、ぽっぽー！',imgsrc:''});
         }
         
         getMetaTag(path) {

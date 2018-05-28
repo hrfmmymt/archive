@@ -20,6 +20,7 @@ export class GlobalFooter extends App {
         display: block;
         background-color: #f8f9fa;
         padding: 2%;
+        margin-top: 4%;
       }
 
       :host footer {
@@ -42,10 +43,10 @@ export class GlobalFooter extends App {
                 <h3>i'm ${data.name}</h3>
                 <ul>
                   <li>
-                    <a href="hrfmmymt.github.io">website</a>
+                    <a href="https://hrfmmymt.github.io">website</a>
                   </li>
                   <li>
-                    <a href="hrfmmymt.com">portfolio</a>
+                    <a href="https://hrfmmymt.com">portfolio</a>
                   </li>
                   <li>
                     <a href="https://twitter.com/hrfmmymt">Twitter</a>

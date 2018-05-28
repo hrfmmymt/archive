@@ -23,7 +23,7 @@ export class _PostList extends App {
     return `
       :host {
         display: block;
-        margin: 4% auto;
+        margin: 0 auto 1%;
         cursor: pointer;
       }
 
@@ -86,6 +86,7 @@ export class _PostList extends App {
         order: 1;
         font-size: 2rem;
         font-weight: 400;
+        margin: 1rem 0 0;
       }
 
       :host a time {
@@ -95,6 +96,7 @@ export class _PostList extends App {
       :host a h4 {
         order: 2;
         font-weight: 400;
+        margin: 1rem 0 0;
       }
     `
   }

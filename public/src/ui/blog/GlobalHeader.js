@@ -18,9 +18,11 @@ export class GlobalHeader extends App {
     return `
       :host {
         display: block;
+        margin: 2% 0 4%;
       }
 
       :host h1 {
+        margin: 0;
         font-size: 3rem;
         font-family: 'Poiret One', cursive;
       }
