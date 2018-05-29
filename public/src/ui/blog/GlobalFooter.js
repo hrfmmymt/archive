@@ -1,17 +1,19 @@
-import { App } from './App.js'
+import { App } from "./App.js";
 
-const COMPONENT_NAME = 'global-footer'
+const COMPONENT_NAME = "global-footer";
 export class GlobalFooter extends App {
   getComponentName() {
-    return COMPONENT_NAME
+    return COMPONENT_NAME;
   }
 
   connectedCallback() {
     const data = {
-      name: 'hrfmmymt',
-      img: '/img/profile.jpg'
-    }
-    super.render(data)
+      name: "hrfmmymt",
+      img: "/img/profile.jpg",
+      twSrc: "/img/twitter.svg",
+      twAlt: "twitter"
+    };
+    super.render(data);
   }
 
   getStyle() {
@@ -25,6 +27,8 @@ export class GlobalFooter extends App {
 
       :host footer {
         display: flex;
+        max-width: 1280px;
+        margin: 0 auto;
       }
 
       :host section {
@@ -35,8 +39,9 @@ export class GlobalFooter extends App {
         margin: 0;
         font-size: 3rem;
         font-family: 'Poiret One', cursive;
+        cursor: default;
       }
-    `
+    `;
   }
 
   getTemplate(data) {
@@ -53,7 +58,10 @@ export class GlobalFooter extends App {
                   <a href="https://hrfmmymt.com">portfolio</a>
                 </li>
                 <li>
-                  <a href="https://twitter.com/hrfmmymt">Twitter</a>
+                  <archive-img
+                    data-src="${data.twSrc}",
+                    data-alt="image ${data.twAlt}"
+                  ><a href="https://twitter.com/hrfmmymt">Twitter</a></archive-img>
                 </li>
                 <li>
                   <a href="https://github.com/hrfmmymt">GitHub</a>
@@ -62,7 +70,7 @@ export class GlobalFooter extends App {
                   <a href="mailto:hrfmmymt@gmail.com">hrfmmymt@gmail.com</a>
                 </li>
               </ul>
-            </footer>`
+            </footer>`;
   }
 }
-customElements.define(COMPONENT_NAME, GlobalFooter)
+customElements.define(COMPONENT_NAME, GlobalFooter);
