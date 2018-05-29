@@ -27,38 +27,41 @@ export class GlobalFooter extends App {
         display: flex;
       }
 
-      :host .profile-img {
-        max-width: 700px;
-        margin-right: 2%;
+      :host section {
+        color: #333;
+      }
+
+      :host h2 {
+        margin: 0;
+        font-size: 3rem;
+        font-family: 'Poiret One', cursive;
       }
     `
   }
 
   getTemplate(data) {
     return `<footer>
-              <archive-img class="profile-img" data-src="${
-                data.img
-              }" data-background-color="transparent"></archive-img>
               <section>
-                <h3>i'm ${data.name}</h3>
-                <ul>
-                  <li>
-                    <a href="https://hrfmmymt.github.io">website</a>
-                  </li>
-                  <li>
-                    <a href="https://hrfmmymt.com">portfolio</a>
-                  </li>
-                  <li>
-                    <a href="https://twitter.com/hrfmmymt">Twitter</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/hrfmmymt">GitHub</a>
-                  </li>
-                  <li>
-                    <a href="mailto:hrfmmymt@gmail.com">hrfmmymt@gmail.com</a>
-                  </li>
-                </ul>
+                <h2>archive</h2>
+                <p>by hrfmmymt</p>
               </section>
+              <ul>
+                <li>
+                  <a href="https://hrfmmymt.github.io">website</a>
+                </li>
+                <li>
+                  <a href="https://hrfmmymt.com">portfolio</a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/hrfmmymt">Twitter</a>
+                </li>
+                <li>
+                  <a href="https://github.com/hrfmmymt">GitHub</a>
+                </li>
+                <li>
+                  <a href="mailto:hrfmmymt@gmail.com">hrfmmymt@gmail.com</a>
+                </li>
+              </ul>
             </footer>`
   }
 }
