@@ -11,7 +11,11 @@ export class GlobalFooter extends App {
       name: "hrfmmymt",
       img: "/img/profile.jpg",
       twSrc: "/img/twitter.svg",
-      twAlt: "twitter"
+      twAlt: "twitter",
+      ghSrc: "/img/github.svg",
+      ghAlt: "GitHub",
+      mlSrc: "/img/mail.svg",
+      mlAlt: "mail"
     };
     super.render(data);
   }
@@ -25,10 +29,23 @@ export class GlobalFooter extends App {
         margin-top: 4%;
       }
 
-      :host footer {
+      :host .footer-top {
         display: flex;
+        justify-content: space-between;
         max-width: 1280px;
         margin: 0 auto;
+      }
+
+      :host .footer-top li {
+        margin-left: 1rem;
+      }
+
+      :host .footer-top a {
+        width: 2.5rem;
+      }
+
+      :host ul {
+        margin: 0;
       }
 
       :host section {
@@ -41,33 +58,69 @@ export class GlobalFooter extends App {
         font-family: 'Poiret One', cursive;
         cursor: default;
       }
+
+      :host li {
+        display: inline-block;
+        vertical-align: middle;
+        list-style-type: none;
+      }
+
+      :host a {
+        display: block;
+        text-decoration: none;
+        color: #000;
+      }
+
+      :host .footer-bottom {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      :host .footer-bottom li {
+        margin-left: 2rem;
+      }
     `;
   }
 
   getTemplate(data) {
     return `<footer>
-              <section>
-                <h2>archive</h2>
-                <p>by hrfmmymt</p>
-              </section>
-              <ul>
+              <div class="footer-top">
+                <section>
+                  <h2>archive</h2>
+                </section>
+                <ul>
+                  <li>
+                    <a href="https://twitter.com/hrfmmymt" target="_blank" rel="noopener noreferrer">
+                      <archive-img
+                        data-src="${data.twSrc}",
+                        data-alt="image ${data.twAlt}"
+                      ></archive-img>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/hrfmmymt" target="_blank" rel="noopener noreferrer">
+                      <archive-img
+                        data-src="${data.ghSrc}",
+                        data-alt="image ${data.ghAlt}"
+                      ></archive-img>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="mailto:hrfmmymt@gmail.com">
+                      <archive-img
+                        data-src="${data.mlSrc}",
+                        data-alt="image ${data.mlAlt}"
+                      ></archive-img>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <ul class="footer-bottom">
                 <li>
                   <a href="https://hrfmmymt.github.io">website</a>
                 </li>
                 <li>
                   <a href="https://hrfmmymt.com">portfolio</a>
-                </li>
-                <li>
-                  <archive-img
-                    data-src="${data.twSrc}",
-                    data-alt="image ${data.twAlt}"
-                  ><a href="https://twitter.com/hrfmmymt">Twitter</a></archive-img>
-                </li>
-                <li>
-                  <a href="https://github.com/hrfmmymt">GitHub</a>
-                </li>
-                <li>
-                  <a href="mailto:hrfmmymt@gmail.com">hrfmmymt@gmail.com</a>
                 </li>
               </ul>
             </footer>`;
