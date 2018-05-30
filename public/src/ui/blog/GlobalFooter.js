@@ -29,27 +29,38 @@ export class GlobalFooter extends App {
         margin-top: 4%;
       }
 
-      :host .footer-top {
+      :host footer {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         max-width: 1280px;
         margin: 0 auto;
       }
 
-      :host .footer-top li {
+      :host .link-top li {
         margin-left: 1rem;
       }
 
-      :host .footer-top a {
+      :host .link-top li:first-child {
+        margin-left: 0;
+      }
+
+      :host .link-top a {
         width: 2.5rem;
       }
 
       :host ul {
         margin: 0;
+        padding: 0;
+      }
+
+      :host li {
+        list-style-type: none;
       }
 
       :host section {
         color: #333;
+        text-align: center;
       }
 
       :host h2 {
@@ -59,10 +70,9 @@ export class GlobalFooter extends App {
         cursor: default;
       }
 
-      :host li {
+      :host .link-top li {
         display: inline-block;
         vertical-align: middle;
-        list-style-type: none;
       }
 
       :host a {
@@ -71,12 +81,12 @@ export class GlobalFooter extends App {
         color: #000;
       }
 
-      :host .footer-bottom {
+      :host .link-bottom {
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-around;
       }
 
-      :host .footer-bottom li {
+      :host .link-bottom ul li {
         margin-left: 2rem;
       }
     `;
@@ -84,11 +94,12 @@ export class GlobalFooter extends App {
 
   getTemplate(data) {
     return `<footer>
-              <div class="footer-top">
-                <section>
-                  <h2>archive</h2>
-                </section>
-                <ul>
+              <section>
+                <h2>archive</h2>
+                <small>by hrfmmymt</small>
+              </section>
+              <div class="link">
+                <ul class="link-top">
                   <li>
                     <a href="https://twitter.com/hrfmmymt" target="_blank" rel="noopener noreferrer">
                       <archive-img
@@ -114,15 +125,15 @@ export class GlobalFooter extends App {
                     </a>
                   </li>
                 </ul>
+                <ul class="link-bottom">
+                  <li>
+                    <a href="https://hrfmmymt.github.io" target="_blank" rel="noopener noreferrer">website</a>
+                  </li>
+                  <li>
+                    <a href="https://hrfmmymt.com" target="_blank" rel="noopener noreferrer">portfolio</a>
+                  </li>
+                </ul>
               </div>
-              <ul class="footer-bottom">
-                <li>
-                  <a href="https://hrfmmymt.github.io">website</a>
-                </li>
-                <li>
-                  <a href="https://hrfmmymt.com">portfolio</a>
-                </li>
-              </ul>
             </footer>`;
   }
 }
