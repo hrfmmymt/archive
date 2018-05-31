@@ -11,6 +11,7 @@ export class _Img extends App {
     this.alt = this.getAttribute('data-alt')
     this.layout = this.getAttribute('data-layout')
     this.randomID = `IMG${parseInt(Math.random() * 1000)}`
+    this.social = this.getAttribute('data-social') || ''
     const data = {
       randomId: this.randomID,
       height: this.getAttribute('data-height'),
@@ -36,13 +37,17 @@ export class _Img extends App {
 
       .image-${data.randomId} img {
       }
+
+      :host .twitter {
+        width: 40px;
+      }
     `
   }
 
   getTemplate(data) {
     return `<div id=${data.randomId} class="image-${
       data.randomId
-    }"></div>`
+    } ${this.social}"></div>`
   }
 
   addEvents() {

@@ -12,19 +12,11 @@ export class SocialShare extends App {
 
   getTemplate(data) {
     return `
-      <archive-img class="social-share-icon" data-src="${
-        data.imgURL
-      }" data-width="30" data-height="30" data-background-color="transparent"></archive-img>
+      <a aria-label="Share on ${data.label}" href="${this.getLinkURL()}" target="_blank">
+        <archive-img class="social-share-icon ${data.label}" data-src="${
+          data.imgURL
+        }" data-width="30" data-height="30" data-background-color="transparent" data-social="${data.label}"></archive-img>
+      </a>
     `
-  }
-
-  addEvents() {
-    this.shadowRoot.addEventListener('click', _ => {
-      window.open(
-        this.getLinkURL(),
-        'newwindow',
-        'location=yes,height=570,width=520,scrollbars=yes,status=yes'
-      )
-    })
   }
 }

@@ -11,7 +11,8 @@ export class _FacebookShare extends SocialShare {
     this.text = this.getAttribute('data-text')
     this.url = this.getAttribute('data-url')
     super.render({
-      imgURL: '/img/facebook.svg'
+      imgURL: '/img/facebook.svg',
+      label: 'facebook'
     })
   }
 
@@ -20,15 +21,17 @@ export class _FacebookShare extends SocialShare {
       :host {
         background-color: #000;
       }
+
+      :host a {
+        display: block;
+      }
     `
   }
 
   getLinkURL() {
-    return `
-      https://www.facebook.com/sharer/sharer.php?display=popup&u=weieweiwei${
-        this.url
-      }&t=${encodeURI(this.title)} - ${encodeURI(this.text)}
-    `
+    return `https://www.facebook.com/sharer/sharer.php?display=popup&u=weieweiwei${
+      this.url
+    }&t=${encodeURI(this.title)} - ${encodeURI(this.text)}`
   }
 }
 
