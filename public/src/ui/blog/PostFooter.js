@@ -19,30 +19,42 @@ export class _PostFooter extends App {
   }
 
   getStyle() {
-    return
+    return `
+      :host {
+        display: block;
+      }
+
+      .share-button {
+        display: inline-block;
+        height: 25px;
+        margin-right: 20px;
+        width: 25px;
+      }
+    `
   }
 
   getTemplate(data) {
     if (navigator.share) {
       return `
-        <archive-web-share class="share-button" data-title="${
+        <web-share class="share-button" data-title="${
           data.title
         }" data-text="${data.text}" data-url="${
           data.url
-        }"></archive-web-share>
+        }"></web-share>
       `
     }
+
     return `
-      <archive-twitter-share class="share-button" data-title="${
+      <twitter-share class="share-button" data-title="${
         data.title
       }" data-text="${data.text}" data-url="${
         data.url
-      }">twitter</archive-twitter-share> 
-      <archive-facebook-share class="share-button" data-title="${
+      }"></twitter-share> 
+      <facebook-share class="share-button" data-title="${
         data.title
       }" data-text="${data.text}" data-url="${
         data.url
-      }">facebook</archive-facebook-share>
+      }"></facebook-share>
     `
   }
 }

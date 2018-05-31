@@ -81,32 +81,32 @@ class PostTemplateBuilder {
       <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-63868653-2"></script>
       <noscript>noscript</noscript>
       <wrapper>
-      <div id="dummyHeader"></div>
-      <div id="dummyPost">
-        <div class="dummyTitle"></div>
-        <div class="dummySubTitle"></div>
-        <div class="dummyDate"></div>
-        <div class="dummySpacer"></div>
-        <div class="dummyLine"></div>
-        <div class="dummyLine"></div>
-        <div class="dummyLine"></div>
-        <div class="dummyImg"></div>
-        <div class="dummyLine"></div>
-        <div class="dummyLine"></div>
-        <div class="dummyLine"></div>
-        <div class="dummyLine"></div>
-        <div class="dummyLine"></div>
-        <div class="dummyLine"></div>
-        <div class="dummyLine"></div>
-        <div class="dummyLine"></div>
-        <div class="dummyLine"></div>
-        <div class="dummyLine"></div>
-        <div class="dummyLine"></div>
-        <div class="dummyLine"></div>
-        <div class="dummyLine"></div>
-      </div>
-      <global-header></global-header>
-      <my-post></my-post>
+        <global-header></global-header>
+        <div id="dummyHeader"></div>
+        <div id="dummyPost">
+          <div class="dummyTitle"></div>
+          <div class="dummySubTitle"></div>
+          <div class="dummyDate"></div>
+          <div class="dummySpacer"></div>
+          <div class="dummyLine"></div>
+          <div class="dummyLine"></div>
+          <div class="dummyLine"></div>
+          <div class="dummyImg"></div>
+          <div class="dummyLine"></div>
+          <div class="dummyLine"></div>
+          <div class="dummyLine"></div>
+          <div class="dummyLine"></div>
+          <div class="dummyLine"></div>
+          <div class="dummyLine"></div>
+          <div class="dummyLine"></div>
+          <div class="dummyLine"></div>
+          <div class="dummyLine"></div>
+          <div class="dummyLine"></div>
+          <div class="dummyLine"></div>
+          <div class="dummyLine"></div>
+          <div class="dummyLine"></div>
+        </div>
+        <my-post></my-post>
       </wrapper>
       <script>
         window.addEventListener("load", _ => {

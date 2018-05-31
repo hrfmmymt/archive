@@ -1,6 +1,6 @@
 import { SocialShare } from './SocialShare.js'
 
-const COMPONENT_NAME = 'archive-twitter-share'
+const COMPONENT_NAME = 'twitter-share'
 export class _TwitterShare extends SocialShare {
   getComponentName() {
     return COMPONENT_NAME
@@ -11,9 +11,16 @@ export class _TwitterShare extends SocialShare {
     this.text = this.getAttribute('data-text')
     this.url = this.getAttribute('data-url')
     super.render({
-      backgroundColor: '#1da1f2',
-      imgURL: ''
+      imgURL: '/img/twitter_bk.svg'
     })
+  }
+
+  getStyle() {
+    return `
+      :host {
+        background-color: transparent;
+      }
+    `
   }
 
   getLinkURL() {
@@ -25,4 +32,5 @@ export class _TwitterShare extends SocialShare {
     }&via=hrfmmymt`
   }
 }
+
 customElements.define(COMPONENT_NAME, _TwitterShare)

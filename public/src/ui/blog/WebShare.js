@@ -1,6 +1,6 @@
 import { SocialShare } from './SocialShare.js'
 
-const COMPONENT_NAME = 'archive-web-share'
+const COMPONENT_NAME = 'web-share'
 export class _WebShare extends SocialShare {
   getComponentName() {
     return COMPONENT_NAME
@@ -11,8 +11,7 @@ export class _WebShare extends SocialShare {
     this.text = this.getAttribute('data-text')
     this.url = this.getAttribute('data-url')
     super.render({
-      backgroundColor: '',
-      imgURL: '/img/webshare.png'
+      imgURL: '/img/webshare.svg'
     })
   }
 
