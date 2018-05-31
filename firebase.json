@@ -1,6 +1,10 @@
 {
   "hosting": {
     "public": "public",
+    "redirects": [{
+      "source": "/",
+      "destination": "/auth"
+    }],
     "ignore": [
       "firebase.json",
       "**/.*",
