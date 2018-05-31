@@ -31,6 +31,17 @@ export class GlobalHeader extends App {
         color: #000;
         text-decoration: none;
       }
+
+      /* for mobile */
+      @media (max-width: 414px) {
+        :host {
+          margin-bottom: 6%;
+        }
+
+        :host header {
+          text-align: center;
+        }
+      }
     `
   }
 

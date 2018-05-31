@@ -98,6 +98,69 @@ export class _PostList extends App {
         font-weight: 400;
         margin: 1rem 0 0;
       }
+
+      /* for mobile */
+      @media (max-width: 414px) {
+        :host {
+          margin-bottom: 2rem;
+        }
+
+        :host a {
+          display: block;
+          margin-bottom: inherit;
+          position: relative;
+          border-bottom: none;
+        }
+
+        :host a.headline archive-img,
+        :host a archive-img,
+        :host a.headline .data,
+        :host a .data {
+          max-width: 100%;
+          width: 100%;
+        }
+
+        :host a.headline h3 {
+          font-size: 1.2rem;
+        }
+
+        :host a.headline .data,
+        :host a .data {
+          display: block;
+        }
+
+        :host a::after {
+          position: absolute;
+          content: '';
+          left: 50%;
+          bottom: -15px;
+          display: inline-block;
+          width: 50%;
+          height: 1px;
+          -moz-transform: translateX(-50%);
+          -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+          background-color: #999;
+        }
+
+        :host a.headline::after {
+          bottom: -30px;
+          width: 100%;
+        }
+
+        :host a.last::after {
+          display: none;
+        }
+
+        :host a.headline {
+          margin-bottom: 4rem;
+        }
+
+        :host a h3 {
+          font-size: 1rem;
+        }
+      }
     `
   }
 

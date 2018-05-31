@@ -19,6 +19,13 @@ export class PostListContainer extends App {
         max-width: 1280px;
         margin: 0 auto;
       }
+
+      /* for mobile */
+      @media (max-width: 414px) {
+        :host {
+          margin-bottom: 4rem;
+        }
+      }
     `
   }
 
@@ -31,7 +38,7 @@ export class PostListContainer extends App {
       fetch('/json/posts.json', { credentials: 'include' }).then(res => {
         res.json().then(json => {
           const postList = []
-          json.posts.map((post, index) => {
+          json.posts.map((post, index, arr) => {
             const template = `<post-list
               data-format="${post.format}"
               data-title="${post.title}"
@@ -39,7 +46,7 @@ export class PostListContainer extends App {
               data-date="${post.date}"
               data-link="${post.link}"
               data-imgsrc="${post.imgsrc}"
-              data-class=${index === 0 ? 'headline' : ''}
+              data-class=${index === 0 ? 'headline' : index === arr.length - 1 ? 'last'  : ''}
               ></post-list>`
             postList.push(template)
           })

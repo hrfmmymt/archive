@@ -89,6 +89,33 @@ export class GlobalFooter extends App {
       :host .link-bottom ul li {
         margin-left: 2rem;
       }
+
+      /* for mobile */
+      @media (max-width: 414px) {
+        :host footer {
+          display: block;
+        }
+
+        :host section {
+          margin-bottom: 1rem;
+        }
+
+        :host .link {
+          text-align: center;
+        }
+
+        :host .link-top {
+          margin-bottom: .5rem;
+        }
+
+        :host .link-bottom {
+          display: block;
+        }
+
+        :host .link-bottom li {
+          display: inline-block;
+        }
+      }
     `;
   }
 
