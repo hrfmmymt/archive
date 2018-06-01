@@ -11,6 +11,9 @@ export class _FacebookShare extends SocialShare {
     this.text = this.getAttribute('data-text')
     this.url = this.getAttribute('data-url')
     super.render({
+      shareUrl: `https://www.facebook.com/sharer/sharer.php?display=popup&u=weieweiwei${
+        this.url
+      }&t=${encodeURI(this.title)} - ${encodeURI(this.text)}`,
       imgURL: '/img/facebook.svg',
       label: 'facebook'
     })

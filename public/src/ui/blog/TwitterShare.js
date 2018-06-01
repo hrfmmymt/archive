@@ -11,6 +11,9 @@ export class _TwitterShare extends SocialShare {
     this.text = this.getAttribute('data-text')
     this.url = this.getAttribute('data-url')
     super.render({
+      shareUrl: `https://twitter.com/intent/tweet?text=${encodeURI(
+        this.title
+      )} - ${encodeURI(this.text)}&url=weiweiwei${this.url}&via=hrfmmymt`,
       imgURL: '/img/twitter_bk.svg',
       label: 'twitter'
     })
@@ -26,12 +29,6 @@ export class _TwitterShare extends SocialShare {
         display: block;
       }
     `
-  }
-
-  getLinkURL() {
-    return `https://twitter.com/intent/tweet?text=${encodeURI(
-      this.title
-    )} - ${encodeURI(this.text)}&url=weiweiwei${this.url}&via=hrfmmymt`
   }
 }
 

@@ -1,4 +1,5 @@
 import { SocialShare } from './SocialShare.js'
+import { _CopyUrl } from './CopyUrl.js'
 
 const COMPONENT_NAME = 'web-share'
 export class _WebShare extends SocialShare {
@@ -15,13 +16,16 @@ export class _WebShare extends SocialShare {
     })
   }
 
+  getTemplate(data) {
+    return `<archive-img class="social-share-icon" data-src="${
+      data.imgURL
+    }" data-width="30" data-height="30"></archive-img>
+    <copy-url></copy-url> `
+  }
+
   addEvents() {
     this.shadowRoot.addEventListener('click', _ => {
-      navigator.share({
-        title: this.title,
-        text: this.text,
-        url: this.url
-      })
+      console.log(this)
     })
   }
 }

@@ -37,10 +37,6 @@ export class _Img extends App {
 
       .image-${data.randomId} img {
       }
-
-      :host .twitter {
-        width: 40px;
-      }
     `
   }
 

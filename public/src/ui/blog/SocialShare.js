@@ -14,7 +14,7 @@ export class SocialShare extends App {
     return `
       <a aria-label="Share on ${
         data.label
-      }" href="${this.getLinkURL()}" target="_blank">
+      }" href="${data.shareUrl ? data.shareUrl : '#'}" target="${data.shareUrl ? '_blank' : ''}">
         <archive-img class="social-share-icon ${data.label}" data-src="${
       data.imgURL
     }" data-width="30" data-height="30" data-background-color="transparent" data-social="${
