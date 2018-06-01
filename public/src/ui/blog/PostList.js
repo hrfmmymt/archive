@@ -167,15 +167,15 @@ export class _PostList extends App {
   getTemplate(data) {
     return `
       <a href=${this.dataLink} class="${data.className && data.className}">
-        ${data.imgsrc && `
+        ${data.imgsrc &&
+          `
           <archive-img
             data-src="${data.imgsrc}",
             data-alt="image ${data.title}",
             data-width="${data.format === 'large' ? '2' : '1'}",
             data-height="${data.format === 'large' ? '1' : '1'}",
             data-layout="${data.format === 'large' ? '' : 'fixed-layout'}"
-          ></archive-img>`
-        }
+          ></archive-img>`}
         <div class="data">
           <h3>${data.title}</h3>
           <h4>${data.subtitle}</h4>

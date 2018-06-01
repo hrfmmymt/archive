@@ -12,10 +12,14 @@ export class SocialShare extends App {
 
   getTemplate(data) {
     return `
-      <a aria-label="Share on ${data.label}" href="${this.getLinkURL()}" target="_blank">
+      <a aria-label="Share on ${
+        data.label
+      }" href="${this.getLinkURL()}" target="_blank">
         <archive-img class="social-share-icon ${data.label}" data-src="${
-          data.imgURL
-        }" data-width="30" data-height="30" data-background-color="transparent" data-social="${data.label}"></archive-img>
+      data.imgURL
+    }" data-width="30" data-height="30" data-background-color="transparent" data-social="${
+      data.label
+    }"></archive-img>
       </a>
     `
   }

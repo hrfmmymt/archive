@@ -36,25 +36,19 @@ export class _PostFooter extends App {
   getTemplate(data) {
     if (navigator.share) {
       return `
-        <web-share class="share-button" data-title="${
-          data.title
-        }" data-text="${data.text}" data-url="${
-          data.url
-        }"></web-share>
+        <web-share class="share-button" data-title="${data.title}" data-text="${
+        data.text
+      }" data-url="${data.url}"></web-share>
       `
     }
 
     return `
       <twitter-share class="share-button" data-title="${
         data.title
-      }" data-text="${data.text}" data-url="${
-        data.url
-      }"></twitter-share> 
+      }" data-text="${data.text}" data-url="${data.url}"></twitter-share>
       <facebook-share class="share-button" data-title="${
         data.title
-      }" data-text="${data.text}" data-url="${
-        data.url
-      }"></facebook-share>
+      }" data-text="${data.text}" data-url="${data.url}"></facebook-share>
     `
   }
 }
