@@ -50,14 +50,20 @@ export class _CopyUrl extends App {
     super.render(data)
   }
 
-  getTemplate(data) {
-    console.log(data)
+  addEvents() {
+    const btn = this.shadowRoot.getElementById('copy-btn')
+    btn.addEventListener('click', _ => {
+      console.log(this)
+    })
+  }
+
+  getTemplate() {
     return `
-    <div class="copy-link__wrapper" aria-labelledby="copy-popover-icon" role="dialog" tabindex="-1" aria-hidden="false">
+    <div class="copy-link__wrapper" aria-labelledby="copy-popover-icon" role="dialog" tabindex="-1" aria-hidden="false" id="copy-link">
       <input class="copy-link__url" value="https://saikounoblog/${
         this.url
       }" id="copy-link" readonly="readonly" type="text">
-      <button type="button" class="copy-link__copy-btn cta">Copy link</button>
+      <button type="button" id="copy-btn" class="copy-link__copy-btn cta">Copy link</button>
       <div class="popover__close-btn" aria-label="Close" role="button" tabindex="0">×</div>
     </div>`
   }
