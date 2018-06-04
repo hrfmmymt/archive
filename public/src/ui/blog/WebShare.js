@@ -8,11 +8,49 @@ export class _WebShare extends SocialShare {
   }
 
   connectedCallback() {
-    this.title = this.getAttribute('data-title')
-    this.text = this.getAttribute('data-text')
-    this.url = this.getAttribute('data-url')
-    super.render({
+    this.state = {
+      active: 'isClose'
+    }
+    const data = {
       imgURL: '/img/webshare.svg'
+    }
+    super.render(data)
+  }
+
+  getStyle() {
+    return `
+    :host {
+      position: relative;
+      cursor: pointer;
+    }
+
+    :host copy-url,
+    :host([data-active='isClose']) copy-url {
+      display: none;
+    }
+
+    :host([data-active='isOpen']) copy-url {
+      display: block;
+    }
+
+    :host copy-url {
+      position: absolute;
+      z-index: 10;
+      width: 180px;
+    }
+    `
+  }
+
+  addEvents() {
+    this.shadowRoot.addEventListener('click', _ => {
+      const active = this.state.active
+      if (active === 'isClose') {
+        this.setAttribute('data-active', 'isOpen')
+        this.state.active = 'isOpen'
+      } else {
+        this.setAttribute('data-active', 'isClose')
+        this.state.active = 'isClose'
+      }
     })
   }
 
@@ -21,12 +59,6 @@ export class _WebShare extends SocialShare {
       data.imgURL
     }" data-width="30" data-height="30"></archive-img>
     <copy-url></copy-url> `
-  }
-
-  addEvents() {
-    this.shadowRoot.addEventListener('click', _ => {
-      console.log(this)
-    })
   }
 }
 

@@ -46,7 +46,13 @@ export class PostListContainer extends App {
               data-date="${post.date}"
               data-link="${post.link}"
               data-imgsrc="${post.imgsrc}"
-              data-class=${index === 0 ? 'headline' : index === arr.length - 1 ? 'last'  : ''}
+              data-class=${
+                index === 0
+                  ? 'headline'
+                  : index === arr.length - 1
+                    ? 'last'
+                    : ''
+              }
               ></post-list>`
             postList.push(template)
           })

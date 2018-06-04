@@ -1,23 +1,23 @@
-import { App } from "./App.js";
+import { App } from './App.js'
 
-const COMPONENT_NAME = "global-footer";
+const COMPONENT_NAME = 'global-footer'
 export class GlobalFooter extends App {
   getComponentName() {
-    return COMPONENT_NAME;
+    return COMPONENT_NAME
   }
 
   connectedCallback() {
     const data = {
-      name: "hrfmmymt",
-      img: "/img/profile.jpg",
-      twSrc: "/img/twitter.svg",
-      twAlt: "twitter",
-      ghSrc: "/img/github.svg",
-      ghAlt: "GitHub",
-      mlSrc: "/img/mail.svg",
-      mlAlt: "mail"
-    };
-    super.render(data);
+      name: 'hrfmmymt',
+      img: '/img/profile.jpg',
+      twSrc: '/img/twitter.svg',
+      twAlt: 'twitter',
+      ghSrc: '/img/github.svg',
+      ghAlt: 'GitHub',
+      mlSrc: '/img/mail.svg',
+      mlAlt: 'mail'
+    }
+    super.render(data)
   }
 
   getStyle() {
@@ -116,7 +116,7 @@ export class GlobalFooter extends App {
           display: inline-block;
         }
       }
-    `;
+    `
   }
 
   getTemplate(data) {
@@ -161,7 +161,7 @@ export class GlobalFooter extends App {
                   </li>
                 </ul>
               </div>
-            </footer>`;
+            </footer>`
   }
 }
-customElements.define(COMPONENT_NAME, GlobalFooter);
+customElements.define(COMPONENT_NAME, GlobalFooter)
