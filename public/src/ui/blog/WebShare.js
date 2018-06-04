@@ -38,11 +38,20 @@ export class _WebShare extends SocialShare {
       z-index: 10;
       width: 180px;
     }
+
+    :host button {
+      padding: 0;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      background: 0;
+      border: 0;
+      cursor: pointer;
+    }
     `
   }
 
   addEvents() {
-    this.shadowRoot.addEventListener('click', _ => {
+    this.shadowRoot.getElementById('open-btn').addEventListener('click', _ => {
       const active = this.state.active
       if (active === 'isClose') {
         this.setAttribute('data-active', 'isOpen')
@@ -55,10 +64,14 @@ export class _WebShare extends SocialShare {
   }
 
   getTemplate(data) {
-    return `<archive-img class="social-share-icon" data-src="${
-      data.imgURL
-    }" data-width="30" data-height="30"></archive-img>
-    <copy-url></copy-url> `
+    return `
+      <button type="button" id="open-btn">
+        <archive-img class="social-share-icon" data-src="${
+          data.imgURL
+        }" data-width="30" data-height="30"></archive-img>
+      </button>
+      <copy-url></copy-url>
+    `
   }
 }
 
