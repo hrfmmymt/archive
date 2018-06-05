@@ -9,6 +9,7 @@ class TopTemplateBuilder {
   }
 
   getTemplate() {
+    console.log(this)
     return `
       <!DOCTYPE html>
       <meta charset="UTF-8">
@@ -25,6 +26,7 @@ class TopTemplateBuilder {
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content="hrfmmymt" />
       <meta name="twitter:creator" content="hrfmmymt" />
+      <title>archive</title>
       <link rel="manifest" href="/manifest.json">
       <link rel="preload" href="/json/posts.json" as="fetch" crossorigin=use-credentials></link>
       <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
