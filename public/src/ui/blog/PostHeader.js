@@ -16,15 +16,25 @@ export class _PostHeader extends App {
   }
 
   getStyle() {
-    return
+    return `
+      :host h3 {
+        font-size: inherit;
+        font-weight: normal;
+        color: #666;
+      }
+
+      :host time {
+        color: #666;
+      }
+    `
   }
 
   getTemplate(data) {
     return `
       <header>
         <h2>${data.title}</h2>
-        <div class="subtitle">${data.subtitle}</div>
-        <div class="date">${data.date}</div>
+        <h3>${data.subtitle}</h3>
+        <time>${data.date}</time>
       </header>
     `
   }

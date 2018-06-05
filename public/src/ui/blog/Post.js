@@ -39,7 +39,18 @@ export class Post extends App {
   }
 
   getStyle() {
-    return
+    return `
+      :host {
+        display: block;
+        max-width: 60rem;
+        margin: 0 auto;
+        line-height: 2;
+        letter-spacing: .4px;
+        font-kerning: normal;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+    `
   }
 
   getTemplate() {
@@ -60,8 +71,8 @@ export class Post extends App {
   }
 
   secondFetch() {
-    const showMoreDOM = this.shadowRoot.getElementById('show-more')
-    if (showMoreDOM) {
+    const showMore = this.shadowRoot.getElementById('show-more')
+    if (showMore) {
       fetch(this.secondFetchEndpoint, { credentials: 'include' }).then(res => {
         res.text().then(text => {
           const markup = new MarkdownParser(text).getMarkUp()
