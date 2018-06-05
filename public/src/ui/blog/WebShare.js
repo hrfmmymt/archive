@@ -52,24 +52,35 @@ export class _WebShare extends SocialShare {
 
   addEvents() {
     const btn = this.shadowRoot.getElementById('open-btn')
-    btn.addEventListener('click', _ => {
-      const active = this.state.active
-      const copyUrl = this.shadowRoot
-        .querySelector('copy-url')
-        .shadowRoot.getElementById('copy-link')
-      if (active === 'isClose') {
+    const copyUrl = this.shadowRoot
+      .querySelector('copy-url')
+      .shadowRoot.getElementById('copy-link')
+
+    const toClose = () => {
+      this.setAttribute('data-active', 'isClose')
+      this.state.active = 'isClose'
+      copyUrl.setAttribute('tabindex', '-1')
+      btn.setAttribute('tabindex', 0)
+      btn.focus()
+    }
+
+    btn.addEventListener('click', () => {
+      if (this.state.active === 'isClose') {
         this.setAttribute('data-active', 'isOpen')
         this.state.active = 'isOpen'
         copyUrl.setAttribute('tabindex', 0)
         copyUrl.focus()
       } else {
-        this.setAttribute('data-active', 'isClose')
-        this.state.active = 'isClose'
-        copyUrl.setAttribute('tabindex', '-1')
-        btn.setAttribute('tabindex', 0)
-        btn.focus()
+        toClose()
       }
     })
+
+    document.onkeydown = event => {
+      event = event || window.event
+      if (event.keyCode === 27) {
+        toClose()
+      }
+    }
   }
 
   getTemplate(data) {

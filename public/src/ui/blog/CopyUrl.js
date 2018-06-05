@@ -10,6 +10,13 @@ export class _CopyUrl extends App {
     return `
     :host {
       display: block;
+      background-color: #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, .5);
+      min-width: 230px;
+    }
+
+    :host .inner {
+      padding: .4rem;
     }
 
     :host input {
@@ -24,11 +31,10 @@ export class _CopyUrl extends App {
     :host button {
       -moz-appearance: none;
       -webkit-appearance: none;
-      background: 0 0;
+      background: 0;
       border: 0;
       border-top: 1px solid #d7d7d7;
       margin-top: 10px;
-      outline: 0;
       padding: 5px 0 0;
       text-align: left;
       width: 100%;
@@ -40,35 +46,43 @@ export class _CopyUrl extends App {
       font-size: 1.2rem;
       cursor: pointer;
     }
+
+    :host button.copied {
+      color: inherit;
+      font-weight: inherit;
+      letter-spacing: normal;
+      text-transform: uppercase;
+    }
     `
   }
 
   connectedCallback() {
     const data = {
-      state: this.parentNode.host
+      state: 'closed'
     }
     super.render(data)
   }
 
   addEvents() {
     const btn = this.shadowRoot.getElementById('copy-btn')
-    btn.addEventListener('click', _ => {
-      console.log(this)
+    btn.addEventListener('click', el => {
+      const elTarget = el.target
+      this.shadowRoot.getElementById('copy-input').select()
+      document.execCommand('copy')
+      elTarget.innerText = 'COPIED TO CLIPBOARD'
+      elTarget.classList.add('copied')
     })
   }
 
   getTemplate() {
     return `
-    <div class="copy-link__wrapper" aria-labelledby="copy-popover-icon" role="dialog" tabindex="-1" aria-hidden="false" id="copy-link">
+    <div class="inner" aria-labelledby="copy-popover-icon" role="dialog" tabindex="-1" aria-hidden="false" id="copy-link">
       <input class="copy-link__url" value="https://saikounoblog/${
         this.url
-      }" id="copy-link" readonly="readonly" type="text">
+      }" id="copy-input" readonly="readonly" type="text">
       <button type="button" id="copy-btn" class="copy-link__copy-btn cta">Copy link</button>
-      <div class="popover__close-btn" aria-label="Close" role="button" tabindex="0">×</div>
     </div>`
   }
-
-  addEvents() {}
 }
 
 customElements.define('copy-url', _CopyUrl)
