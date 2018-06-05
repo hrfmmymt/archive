@@ -10,7 +10,7 @@
     "webpack": "webpack",
     "build": "npm-run-all -p webpack md meta valid-path versioning",
     "dev": "firebase serve -p 4567 --only hosting,functions",
-    "deproy": "firebase deploy",
+    "deploy": "firebase deploy",
     "eslint": "eslint public/src/ui/blog/*.js",
     "md": "node ./utils/md-split.js",
     "meta": "node ./utils/write-MetaTagUtilJs.js",
