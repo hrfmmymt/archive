@@ -3,26 +3,18 @@
     {
       "format": "",
       "title": "preact-cli でポートフォリオサイトを作った",
-      "subtitle": "subtitle",
-      "date": "2018/05/26",
-      "imgsrc": "/img/post/any.jpg",
-      "link": "/post/20180526"
+      "subtitle": "あとで書く",
+      "date": "2018/06/06",
+      "imgsrc": "/img/noimg.jpg",
+      "link": "/post/20180606"
     },
     {
       "format": "",
-      "title": "バニラ JS でブログを作ろう！",
-      "subtitle": "高収入バニラJS！",
-      "date": "2018/05/23",
-      "imgsrc": "/img/post/1-1.jpg",
-      "link": "/post/20180523"
-    },
-    {
-      "format": "",
-      "title": "トンネルポッポー！",
-      "subtitle": "大きな声で、ぽっぽー！",
-      "date": "2018/05/21",
-      "imgsrc": "",
-      "link": "/post/0"
+      "title": "hello, world!",
+      "subtitle": "はじめのごあいさつ",
+      "date": "2018/06/05",
+      "imgsrc": "/img/dist/20180605.jpg",
+      "link": "/post/20180605"
     }
   ]
 }

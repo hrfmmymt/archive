@@ -1,7 +1,7 @@
 const Jimp = require('jimp')
 const glob = require('glob')
 
-glob('public/img/post/*.{jpg,png,gif}', (err, files) => {
+glob('public/img/raw/*.{jpg,png,gif}', (err, files) => {
   files.map(node => {
     Jimp.read(node)
       .then(image => {

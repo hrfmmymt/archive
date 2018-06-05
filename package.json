@@ -16,7 +16,7 @@
     "meta": "node ./utils/write-MetaTagUtilJs.js",
     "valid-path": "node ./utils/write-PostPathValidatorJs.js",
     "versioning": "node ./utils/write-BuildVersionJs.js",
-    "img-min": "imagemin ./public/img/post/* --out-dir=./public/img/post",
+    "img-min": "imagemin ./public/img/raw/* --out-dir=./public/img/dist",
     "img-resize": "node ./utils/img-resize.js",
     "img-opt": "npm-run-all -s img-resize img-min",
     "gen-icons": "node ./utils/gen-icons.js",
