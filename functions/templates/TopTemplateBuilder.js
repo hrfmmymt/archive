@@ -12,6 +12,8 @@ class TopTemplateBuilder {
     console.log(this)
     return `
       <!DOCTYPE html>
+      <html lang="ja" prefix="og: http://ogp.me/ns#">
+      <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link href="/img/favicon.ico" rel="shortcut icon">
@@ -47,6 +49,8 @@ class TopTemplateBuilder {
           padding: 0 2rem;
         }
       </style>
+      </head>
+      <body>
       <noscript>noscript</noscript>
       <wrapper>
       <global-header></global-header>
@@ -69,6 +73,8 @@ class TopTemplateBuilder {
         });
         // GA
       </script>
+      </body>
+      </html>
     `
   }
 }

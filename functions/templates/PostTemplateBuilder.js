@@ -14,9 +14,11 @@ class PostTemplateBuilder {
   getTemplate() {
     return `
       <!DOCTYPE html>
+      <html lang="ja" prefix="og: http://ogp.me/ns#">
+      <head>
       <meta charset="UTF-8">
       <link href="/img/favicon.ico" rel="shortcut icon">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="theme-color" content="#fff">
       ${this.metaTag}
       <link rel="manifest" href="/manifest.json">
@@ -79,6 +81,8 @@ class PostTemplateBuilder {
         }
       </style>
       <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-63868653-2"></script>
+      </head>
+      <body>
       <noscript>noscript</noscript>
       <wrapper>
         <global-header></global-header>
@@ -122,6 +126,8 @@ class PostTemplateBuilder {
         });
         // GA
       </script>
+      </body>
+      </html>
     `
   }
 }
