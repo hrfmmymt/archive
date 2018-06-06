@@ -12,9 +12,9 @@ export class SocialShare extends App {
 
   getTemplate(data) {
     return `
-      <a aria-label="Share on ${
-        data.label
-      }" href="${data.shareUrl ? data.shareUrl : '#'}" target="${data.shareUrl ? '_blank' : ''}">
+      <a aria-label="Share on ${data.label}" href="${
+      data.shareUrl ? data.shareUrl : '#'
+    }" target="${data.shareUrl ? '_blank' : ''}" rel="noopener">
         <archive-img class="social-share-icon ${data.label}" data-src="${
       data.imgURL
     }" data-width="30" data-height="30" data-background-color="transparent" data-social="${

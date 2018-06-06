@@ -24,6 +24,9 @@ fs.readFile('./public/json/posts.json', (error, data) => {
 
       getMetaTag(path) {
         return \`
+        <meta name="description" content="\$\{
+          this.metaMap.get(path).subtitle
+        \}">
         <meta property="og:title" content="\$\{this.metaMap.get(path).title\}">
         <meta property="og:description" content="\$\{
           this.metaMap.get(path).subtitle
