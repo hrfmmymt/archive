@@ -38,6 +38,10 @@ class PostTemplateBuilder {
           width: 100%;
         }
 
+        body {
+          font-family: -apple-system, BlinkMacSystemFont, Roboto, Arial, Helvetica, sans-serif;
+        }
+
         wrapper {
           display: block;
           width: 100%;
@@ -112,7 +116,7 @@ class PostTemplateBuilder {
         <my-post></my-post>
       </wrapper>
       <script>
-        window.addEventListener("load", _ => {
+        window.addEventListener('load', _ => {
           if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('/sw.js');
           }

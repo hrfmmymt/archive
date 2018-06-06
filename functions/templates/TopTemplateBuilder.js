@@ -43,12 +43,18 @@ class TopTemplateBuilder {
         * {
           box-sizing: border-box;
         }
+
         html, body {
           padding: 0px;
           margin: 0px;
           width: 100%;
           height: 100%;
         }
+
+        body {
+          font-family: -apple-system, BlinkMacSystemFont, Roboto, Arial, Helvetica, sans-serif;
+        }
+
         wrapper {
           display: block;
           width: 100%;
