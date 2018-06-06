@@ -139,7 +139,7 @@ export class MarkdownParser {
       }
 
       parseStrong() {
-        return this.createNewRow(/\*\*(.+?)\*\*/g, `<b>$1</b>`)
+        return this.createNewRow(/\*\*(.+?)\*\*/g, `<strong>$1</strong>`)
       }
 
       parseEmphasis() {
