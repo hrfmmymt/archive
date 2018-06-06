@@ -24,7 +24,8 @@ export class GlobalHeader extends App {
       :host h1 {
         margin: 0;
         font-size: 3rem;
-        font-family: 'Poiret One', cursive;
+        font-family: 'Give You Glory', cursive;
+        font-weight: 800;
       }
 
       :host a {
@@ -50,7 +51,7 @@ export class GlobalHeader extends App {
     if (dummy) dummy.style.display = 'none'
     return `
       <header>
-        <h1><a href="/">${data.blogTitle}</a></h1>
+        <h1><a href="/"># ${data.blogTitle}</a></h1>
       </header>
     `
   }

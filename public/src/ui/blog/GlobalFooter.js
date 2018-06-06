@@ -66,7 +66,7 @@ export class GlobalFooter extends App {
       :host h2 {
         margin: 0;
         font-size: 3rem;
-        font-family: 'Poiret One', cursive;
+        font-family: 'Give You Glory', cursive;
         cursor: default;
       }
 
@@ -122,7 +122,7 @@ export class GlobalFooter extends App {
   getTemplate(data) {
     return `<footer>
               <section>
-                <h2>archive</h2>
+                <h2># archive</h2>
                 <small>by hrfmmymt</small>
               </section>
               <div class="link">
