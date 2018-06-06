@@ -25,8 +25,8 @@ export class GlobalFooter extends App {
       :host {
         display: block;
         background-color: #f8f9fa;
-        padding: 2%;
-        margin-top: 4%;
+        padding: 2rem;
+        margin-top: 3rem;
       }
 
       :host footer {
@@ -70,6 +70,10 @@ export class GlobalFooter extends App {
         cursor: default;
       }
 
+      :host .link-top {
+        margin-bottom: 2rem;
+      }
+
       :host .link-top li {
         display: inline-block;
         vertical-align: middle;
@@ -79,6 +83,14 @@ export class GlobalFooter extends App {
         display: block;
         text-decoration: none;
         color: #000;
+      }
+
+      :host .link-bottom a {
+        text-decoration: underline;
+      }
+
+      :host .link-bottom a:hover {
+        text-decoration: none;
       }
 
       :host .link-bottom {
@@ -92,6 +104,10 @@ export class GlobalFooter extends App {
 
       /* for mobile */
       @media (max-width: 414px) {
+        :host {
+          padding: 2rem 0 4rem;
+        }
+
         :host footer {
           display: block;
         }
@@ -105,7 +121,7 @@ export class GlobalFooter extends App {
         }
 
         :host .link-top {
-          margin-bottom: .5rem;
+          margin: 2rem auto;
         }
 
         :host .link-bottom {
@@ -114,6 +130,11 @@ export class GlobalFooter extends App {
 
         :host .link-bottom li {
           display: inline-block;
+          margin-right: 1rem;
+        }
+
+        :host .link-bottom li:last-of-type {
+          margin-right: 0;
         }
       }
     `
