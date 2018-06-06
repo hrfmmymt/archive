@@ -1,9 +1,8 @@
 
-    /** Auto generated module */
-    class BuildVersion {
-      getVersion() {
-        return 'v1528299515739'
-      }
+  /** Auto generated module */
+  class BuildVersion {
+    getVersion() {
+      return 'v1528300445104'
     }
-    module.exports = BuildVersion
-  
+  }
+  module.exports = BuildVersion

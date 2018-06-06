@@ -34,13 +34,18 @@ export class _PostList extends App {
         border-bottom: 1px solid #999;
       }
 
+      :host h4,
+      :host time {
+        color: #666;
+      }
+
       :host a.headline {
         margin-bottom: 8%;
         padding: 0;
         border-bottom: none;
       }
 
-      :host a.headline h3 {
+      :host a.headline .data h3 {
         order: 2;
         font-size: 3rem;
       }
@@ -52,17 +57,16 @@ export class _PostList extends App {
         max-width: 65%;
       }
 
-      :host a.headline h4 {
+      :host a.headline .data h4 {
         order: 3;
       }
 
-      :host a.headline time {
+      :host a.headline .data time {
         order: 1;
         align-self: stretch;
       }
 
       :host a.headline .data {
-        display: block;
         max-width: 35%;
       }
 

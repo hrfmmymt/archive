@@ -50,6 +50,33 @@ export class Post extends App {
         -webkit-font-smoothing: antialiased;
         text-rendering: optimizeLegibility;
       }
+
+      :host pre {
+        font-size: .9em;
+        line-height: 1.6em;
+        overflow-x: auto;
+        width: calc(100% - 2em);
+        padding: 1em;
+        white-space: pre;
+        border-radius: 3px;
+        background-color: rgba(27, 31, 35, .05);
+      }
+
+      :host code {
+        font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+        padding: .2em .4em;
+        margin: 0;
+        font-size: 85%;
+        background-color: rgba(27, 31, 35, .05);
+        border-radius: 3px;
+      }
+
+      :host blockquote {
+        margin-left: 0;
+        padding: 0 1em;
+        color: #777;
+        border-left: .5em solid #ddd;
+      }
     `
   }
 

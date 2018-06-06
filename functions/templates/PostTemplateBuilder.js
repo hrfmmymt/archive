@@ -14,9 +14,11 @@ class PostTemplateBuilder {
   getTemplate() {
     return `
       <!DOCTYPE html>
+      <html lang="ja" prefix="og: http://ogp.me/ns#">
+      <head>
       <meta charset="UTF-8">
       <link href="/img/favicon.ico" rel="shortcut icon">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="theme-color" content="#fff">
       ${this.metaTag}
       <link rel="manifest" href="/manifest.json">
@@ -35,6 +37,10 @@ class PostTemplateBuilder {
           padding: 0px;
           margin: 0px;
           width: 100%;
+        }
+
+        body {
+          font-family: -apple-system, BlinkMacSystemFont, Roboto, Arial, Helvetica, sans-serif;
         }
 
         wrapper {
@@ -79,7 +85,8 @@ class PostTemplateBuilder {
           }
         }
       </style>
-      <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-63868653-2"></script>
+      </head>
+      <body>
       <noscript>noscript</noscript>
       <wrapper>
         <global-header></global-header>
@@ -110,7 +117,7 @@ class PostTemplateBuilder {
         <my-post></my-post>
       </wrapper>
       <script>
-        window.addEventListener("load", _ => {
+        window.addEventListener('load', _ => {
           if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('/sw.js');
           }
@@ -123,6 +130,8 @@ class PostTemplateBuilder {
         });
         // GA
       </script>
+      </body>
+      </html>
     `
   }
 }
