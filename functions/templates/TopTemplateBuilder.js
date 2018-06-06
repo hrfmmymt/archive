@@ -9,26 +9,32 @@ class TopTemplateBuilder {
   }
 
   getTemplate() {
-    console.log(this)
     return `
       <!DOCTYPE html>
       <html lang="ja" prefix="og: http://ogp.me/ns#">
       <head>
       <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="author" content="hrfmmymt">
+      <meta name="copyright" content="Copyright(c)hrfmmymt. 2018 All Rights Reserved.">
+      <meta name="description" content="hrfmmymt による新しいブログ。読んで。">
+      <meta name="format-detection" content="telephone=no,address=no,email=no">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
       <link href="/img/favicon.ico" rel="shortcut icon">
       <meta name="theme-color" content="#fff">
-      <meta property="og:title" content="archive" />
-      <meta property="og:type" content="post" />
-      <meta property="og:url" content="/" />
-      <meta property="og:image" content="" />
-      <meta property="og:site_name" content="archive" />
-      <meta property="og:description" content="" />
-      <meta property="fb:app_id" content="" />
-      <meta name="twitter:card" content="summary" />
-      <meta name="twitter:site" content="hrfmmymt" />
-      <meta name="twitter:creator" content="hrfmmymt" />
-      <title>archive</title>
+      <meta property="og:site_name" content="archive">
+      <meta property="og:description" content="hrfmmymt による新しいブログ。読んで。">
+      <meta property="og:title" content="archive - hrfmmymt&#39;s blog">
+      <meta property="og:url" content="">
+      <meta property="og:image" content="/img/icon.png">
+      <meta property="og:type" content="website">
+      <meta property="og:locale" content="ja_JP">
+      <meta name="twitter:title" content="archive - hrfmmymt&#39;s blog">
+      <meta name="twitter:description" content="hrfmmymt による新しいブログ。読んで。">
+      <meta name="twitter:image" content="/img/icon.png">
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:site" content="hrfmmymt">
+      <meta name="twitter:creator" content="hrfmmymt">
+      <title>archive | hrfmmymt&#39;s blog</title>
       <link rel="manifest" href="/manifest.json">
       <link rel="preload" href="/json/posts.json" as="fetch" crossorigin=use-credentials></link>
       <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
@@ -60,7 +66,7 @@ class TopTemplateBuilder {
       </wrapper>
       <global-footer></global-footer>
       <script>
-        window.addEventListener("load", _ => {
+        window.addEventListener('load', _ => {
           if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('/sw.js');
           }

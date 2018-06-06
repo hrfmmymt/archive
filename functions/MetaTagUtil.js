@@ -16,21 +16,26 @@ class MetaTagUtil {
 
   getMetaTag(path) {
     return `
-      <meta property="og:title" content="${this.metaMap.get(path).title}" />
-      <meta property="og:type" content="" />
-      <meta property="og:url" content="${path}" />
-      <meta property="og:image" content="weiweiwei${
-        this.metaMap.get(path).imgsrc
-      }" />
-      <meta property="og:site_name" content="archive" />
+      <meta property="og:title" content="${this.metaMap.get(path).title}">
       <meta property="og:description" content="${
         this.metaMap.get(path).subtitle
-      }" />
-      <meta property="fb:app_id" content="" />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@hrfmmymt" />
-      <meta name="twitter:creator" content="@hrfmmymt" />
-      <title>${this.metaMap.get(path).title} - archive</title>
+      }">
+      <meta property="og:url" content="${path}">
+      <meta property="og:type" content="website">
+      <meta property="og:locale" content="ja_JP">
+      <meta property="og:image" content="${this.metaMap.get(path).imgsrc}">
+      <meta name="twitter:title" content="${
+        this.metaMap.get(path).title
+      } | archive">
+      <meta name="twitter:description" content="${
+        this.metaMap.get(path).subtitle
+      } | archive">
+      <meta name="twitter:image" content="${this.metaMap.get(path).imgsrc}">
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:site" content="@hrfmmymt">
+      <title>${
+        this.metaMap.get(path).title
+      } | archive - hrfmmymt&#39;s blog</title>
     `
   }
 }

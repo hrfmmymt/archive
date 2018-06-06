@@ -80,7 +80,6 @@ class PostTemplateBuilder {
           }
         }
       </style>
-      <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-63868653-2"></script>
       </head>
       <body>
       <noscript>noscript</noscript>
