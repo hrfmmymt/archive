@@ -8,12 +8,11 @@ export class _TwitterShare extends SocialShare {
 
   connectedCallback() {
     this.title = this.getAttribute('data-title')
-    this.text = this.getAttribute('data-text')
     this.url = this.getAttribute('data-url')
     super.render({
-      shareUrl: `https://twitter.com/intent/tweet?text=${encodeURI(
+      shareUrl: `https://twitter.com/intent/tweet?text=archive - hrfmmymt's blog: &#34;${encodeURI(
         this.title
-      )} - ${encodeURI(this.text)}&url=https://archive.hrfmmymt.com${this.url}&via=hrfmmymt`,
+      )}&#34;&url=https://archive.hrfmmymt.com${this.url}&via=hrfmmymt`,
       imgURL: '/img/twitter_bk.svg',
       label: 'twitter'
     })

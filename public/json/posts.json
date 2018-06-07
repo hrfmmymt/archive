@@ -2,6 +2,14 @@
   "posts": [
     {
       "format": "",
+      "title": "2018/06/07",
+      "subtitle": "今日のやつ",
+      "date": "2018/06/07",
+      "imgsrc": "/img/dist/20180607.jpg",
+      "link": "/post/20180607"
+    },
+    {
+      "format": "",
       "title": "preact-cli でポートフォリオサイトを作った",
       "subtitle": "あとで書く",
       "date": "2018/06/06",
