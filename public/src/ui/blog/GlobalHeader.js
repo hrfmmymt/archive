@@ -44,6 +44,7 @@ export class GlobalHeader extends App {
 
         :host h1 {
           margin-bottom: 1rem;
+          font-size: 2.7rem;
         }
       }
     `

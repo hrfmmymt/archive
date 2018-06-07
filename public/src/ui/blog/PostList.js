@@ -47,7 +47,7 @@ export class _PostList extends App {
 
       :host a.headline h3 {
         order: 2;
-        font-size: 3rem;
+        font-size: 2.5rem;
       }
 
       :host a.headline archive-img {
