@@ -39,6 +39,10 @@ class PostTemplateBuilder {
           width: 100%;
         }
 
+        html {
+          font-size: calc(1em + .5vw);
+        }
+
         body {
           font-family: -apple-system, BlinkMacSystemFont, Roboto, Arial, Helvetica, sans-serif;
         }

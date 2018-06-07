@@ -45,7 +45,7 @@ export class _PostList extends App {
         border-bottom: none;
       }
 
-      :host a.headline .data h3 {
+      :host a.headline h3 {
         order: 2;
         font-size: 3rem;
       }
@@ -57,11 +57,11 @@ export class _PostList extends App {
         max-width: 65%;
       }
 
-      :host a.headline .data h4 {
+      :host a.headline h4 {
         order: 3;
       }
 
-      :host a.headline .data time {
+      :host a.headline time {
         order: 1;
         align-self: stretch;
       }

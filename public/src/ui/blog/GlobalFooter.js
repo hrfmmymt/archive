@@ -65,7 +65,6 @@ export class GlobalFooter extends App {
 
       :host h2 {
         margin: 0;
-        font-size: 3rem;
         font-family: 'Give You Glory', cursive;
         cursor: default;
       }

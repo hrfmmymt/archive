@@ -36,7 +36,7 @@ export class _WebShare extends SocialShare {
     :host copy-url {
       position: absolute;
       z-index: 10;
-      width: 180px;
+      width: 14rem;
     }
 
     :host button {
