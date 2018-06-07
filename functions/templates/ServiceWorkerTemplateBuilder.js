@@ -35,58 +35,57 @@ class ServiceWorkerTemplateBuilder {
 
   getTemplate() {
     return `
-                const CACHE_NAME = '${this.getServiceWorkerVersion()}';
-                const urlsToCache = [
-                    ${this.getInstallURLs()}
-                ];
+      const CACHE_NAME = '${this.getServiceWorkerVersion()}';
+      const urlsToCache = [
+        ${this.getInstallURLs()}
+      ];
 
-                addEventListener('install', event => {
-                    event.waitUntil(caches.open(CACHE_NAME).then(async cache => {
-                            skipWaiting();
-                            return cache.addAll(urlsToCache);
-                    }));
-                });
+      addEventListener('install', event => {
+        event.waitUntil(caches.open(CACHE_NAME).then(async cache => {
+          skipWaiting();
+          return cache.addAll(urlsToCache);
+        }));
+      });
 
-                //Enable navigationPreload: https://developers.google.com/web/updates/2017/02/navigation-preload
-                addEventListener('activate', event => {
-                    event.waitUntil(async function() {
-                        
-                        const oldCacheKeys = await caches.keys();
-                        oldCacheKeys.filter(key => key !== CACHE_NAME).map(key => caches.delete(key));
+      //Enable navigationPreload: https://developers.google.com/web/updates/2017/02/navigation-preload
+      addEventListener('activate', event => {
+        event.waitUntil(async function() {
+          const oldCacheKeys = await caches.keys();
+          oldCacheKeys.filter(key => key !== CACHE_NAME).map(key => caches.delete(key));
 
-                        // Feature-detect
-                        if (self.registration.navigationPreload) {
-                            // Enable navigation preloads!
-                            // await self.registration.navigationPreload.enable();
-                        }
-                        clients.claim();
-                    }());
-                });
+          // Feature-detect
+          if (self.registration.navigationPreload) {
+            // Enable navigation preloads!
+            // await self.registration.navigationPreload.enable();
+          }
+          clients.claim();
+        }());
+      });
 
-                //Enable navigationPreload: https://developers.google.com/web/updates/2017/02/navigation-preload
-                addEventListener('fetch', event => {
-                    event.respondWith(async function() {
-                        // Respond from the cache if we can
-                        const cachedResponse = await caches.match(event.request);
-                        if (cachedResponse) return cachedResponse;
+      //Enable navigationPreload: https://developers.google.com/web/updates/2017/02/navigation-preload
+      addEventListener('fetch', event => {
+        event.respondWith(async function() {
+          // Respond from the cache if we can
+          const cachedResponse = await caches.match(event.request);
+          if (cachedResponse) return cachedResponse;
 
-                        // Else, use the preloaded response, if it's there
-                        // const response = await event.preloadResponse;
-                        // if (response) return response;
+          // Else, use the preloaded response, if it's there
+          // const response = await event.preloadResponse;
+          // if (response) return response;
 
-                        const isHTML = event.request.headers.get('accept').includes('text/html');
-                        // Else try the network.
-                        return fetch(event.request).catch(error => {
-                            if(!isHTML) {
-                                return;
-                            }
-                            return caches.open(CACHE_NAME).then(cache => {
-                                return cache.match('/offline')
-                            })
-                        })
-                    }());
-                });
-        `
+          const isHTML = event.request.headers.get('accept').includes('text/html');
+          // Else try the network.
+          return fetch(event.request).catch(error => {
+            if(!isHTML) {
+              return;
+            }
+            return caches.open(CACHE_NAME).then(cache => {
+              return cache.match('/offline')
+            })
+          })
+        }());
+      });
+    `
   }
 }
 module.exports = ServiceWorkerTemplateBuilder

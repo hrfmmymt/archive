@@ -90,28 +90,34 @@ module.exports = {
       `
     }
   },
-  getErrorTemplate: function(message) {
+  getErrorTemplate(message) {
     return `
       <!DOCTYPE html>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-      <style>
-        html, body {
-          padding: 0px;
-          margin: 0px;
-        }
-        wrapper {
-          display: block;
-          width: 100%;
-          padding: 0 2rem;
-        }
-      </style>
-      <wrapper>
-      <div class="message">
-        <h1>404</h1>
-      </div>
-      </wrapper>
+      <html lang="ja" prefix="og: http://ogp.me/ns#">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+          <style>
+            html, body {
+              padding: 0px;
+              margin: 0px;
+            }
+            wrapper {
+              display: block;
+              width: 100%;
+              padding: 0 2rem;
+            }
+          </style>
+        </head>
+        <body>
+          <wrapper>
+          <div class="error">
+            <h1>404</h1>
+          </div>
+          </wrapper>
+        </body>
+      </html>
     `
   }
 }
