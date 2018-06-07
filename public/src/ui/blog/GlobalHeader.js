@@ -22,7 +22,6 @@ export class GlobalHeader extends App {
       }
 
       :host h1 {
-        margin: 0;
         font-size: 3rem;
         font-family: 'Give You Glory', cursive;
         font-weight: 800;
@@ -41,6 +40,10 @@ export class GlobalHeader extends App {
 
         :host header {
           text-align: center;
+        }
+
+        :host h1 {
+          margin-bottom: 1rem;
         }
       }
     `

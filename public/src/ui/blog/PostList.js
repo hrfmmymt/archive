@@ -89,7 +89,6 @@ export class _PostList extends App {
       :host a h3 {
         order: 1;
         font-size: 2rem;
-        font-weight: 400;
         margin: 1rem 0 0;
       }
 
