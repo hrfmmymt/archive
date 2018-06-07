@@ -13,7 +13,7 @@ export class _TwitterShare extends SocialShare {
     super.render({
       shareUrl: `https://twitter.com/intent/tweet?text=${encodeURI(
         this.title
-      )} - ${encodeURI(this.text)}&url=weiweiwei${this.url}&via=hrfmmymt`,
+      )} - ${encodeURI(this.text)}&url=https://archive.hrfmmymt.com${this.url}&via=hrfmmymt`,
       imgURL: '/img/twitter_bk.svg',
       label: 'twitter'
     })
