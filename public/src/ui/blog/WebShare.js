@@ -11,6 +11,7 @@ export class _WebShare extends SocialShare {
     this.state = {
       active: 'isClose'
     }
+    this.url = this.getAttribute('data-url')
     const data = {
       imgURL: '/img/webshare.svg'
     }
@@ -90,7 +91,7 @@ export class _WebShare extends SocialShare {
           data.imgURL
         }" data-width="30" data-height="30"></archive-img>
       </button>
-      <copy-url></copy-url>
+      <copy-url data-url="${this.url}"></copy-url>
     `
   }
 }

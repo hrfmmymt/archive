@@ -57,6 +57,7 @@ export class _CopyUrl extends App {
   }
 
   connectedCallback() {
+    this.url = this.getAttribute('data-url')
     const data = {
       state: 'closed'
     }
@@ -77,7 +78,7 @@ export class _CopyUrl extends App {
   getTemplate() {
     return `
     <div class="inner" aria-labelledby="copy-popover-icon" role="dialog" tabindex="-1" aria-hidden="false" id="copy-link">
-      <input class="copy-link__url" value="https://archive.hrfmmymt.com/${
+      <input class="copy-link__url" value="https://archive.hrfmmymt.com${
         this.url
       }" id="copy-input" readonly="readonly" type="text">
       <button type="button" id="copy-btn" class="copy-link__copy-btn cta">Copy link</button>
