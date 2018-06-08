@@ -75,6 +75,8 @@ class TopTemplateBuilder {
             <post-list-container></post-list-container>
           </wrapper>
           <global-footer></global-footer>
+          <!-- Global site tag (gtag.js) - Google Analytics -->
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62083994-2"></script>
           <script>
             window.addEventListener('load', _ => {
               if ('serviceWorker' in navigator) {
@@ -87,7 +89,12 @@ class TopTemplateBuilder {
               deferredPrompt = e;
               return false;
             });
-            // GA
+
+            // ga
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-62083994-2');
           </script>
         </body>
       </html>

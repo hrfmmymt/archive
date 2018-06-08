@@ -119,6 +119,8 @@ class PostTemplateBuilder {
             </div>
             <my-post></my-post>
           </wrapper>
+          <!-- Global site tag (gtag.js) - Google Analytics -->
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62083994-2"></script>
           <script>
             window.addEventListener('load', _ => {
               if ('serviceWorker' in navigator) {
@@ -131,7 +133,12 @@ class PostTemplateBuilder {
               deferredPrompt = e;
               return false;
             });
-            // GA
+
+            // ga
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-62083994-2');
           </script>
         </body>
       </html>
