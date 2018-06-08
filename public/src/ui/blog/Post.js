@@ -42,7 +42,7 @@ export class Post extends App {
     return `
       :host {
         display: block;
-        max-width: 60rem;
+        max-width: 40rem;
         margin: 0 auto;
         line-height: 2;
         letter-spacing: .4px;
