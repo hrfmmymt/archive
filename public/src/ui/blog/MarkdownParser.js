@@ -9,12 +9,14 @@ export class MarkdownParser {
         this.isUl = isUl === undefined ? false : isUl
         this.isBlock = isBlock
       }
+
       getInnerHTML() {
         if (this.isOl === true || this.isUl === true || this.isBlock === true) {
           return this.row
         }
-        return `${this.row}<br>`
+        return `<p>${this.row}</p>`
       }
+
       createNewRow(regex, replace) {
         return new Row(
           this.row.replace(regex, replace),
@@ -82,6 +84,10 @@ export class MarkdownParser {
           return this.createNewRow(regex, replace)
         }
         return this
+      }
+
+      parseBr() {
+        return this.createNewRow(/  /g, `<br>`)
       }
 
       parseHR() {
@@ -153,6 +159,26 @@ export class MarkdownParser {
         )
       }
 
+      parseUnCheckedbox() {
+        return this.createNewRow(
+          /\[\](.+)/g,
+          `<p>
+            <input type="checkbox" disabled>
+            <label>$1</label>
+           </p>`
+        )
+      }
+
+      parseCheckedbox() {
+        return this.createNewRow(
+          /\[x\](.+)/g,
+          `<p>
+            <input type="checkbox" disabled checked>
+            <label>$1</label>
+           </p>`
+        )
+      }
+
       parseCode() {
         return this.createNewRow(/`(.+?)`/g, `<code>$1</code>`)
       }
@@ -210,6 +236,7 @@ export class MarkdownParser {
       .parseH1()
       .parseH2()
       .parseH3()
+      .parseBr()
       .parseHR()
       .parseShowMore()
       .parseGist()
@@ -220,5 +247,7 @@ export class MarkdownParser {
       .parseEmphasis()
       .parseCode()
       .parseList()
+      .parseUnCheckedbox()
+      .parseCheckedbox()
   }
 }
