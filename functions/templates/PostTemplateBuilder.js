@@ -17,7 +17,7 @@ class PostTemplateBuilder {
       <html lang="ja" prefix="og: http://ogp.me/ns#">
         <head>
           <meta charset="UTF-8">
-          <link href="/img/icon_16x16.png" rel="shortcut icon">
+          <link href="/img/favicon.ico" rel="shortcut icon">
           <meta name="viewport" content="width=device-width, initial-scale=1">
           <meta name="theme-color" content="#fff">
           ${this.metaTag}

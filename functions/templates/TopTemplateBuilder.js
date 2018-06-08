@@ -19,7 +19,7 @@ class TopTemplateBuilder {
           <meta name="description" content="hrfmmymt による新しいブログ。読んで。">
           <meta name="format-detection" content="telephone=no,address=no,email=no">
           <meta name="viewport" content="width=device-width, initial-scale=1">
-          <link href="/img/icon_16x16.png" rel="shortcut icon">
+          <link href="/img/favicon.ico" rel="shortcut icon">
           <meta name="theme-color" content="#fff">
           <meta property="og:site_name" content="archive">
           <meta property="og:description" content="hrfmmymt による新しいブログ。読んで。">
