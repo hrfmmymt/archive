@@ -19,18 +19,18 @@ class TopTemplateBuilder {
           <meta name="description" content="hrfmmymt による新しいブログ。読んで。">
           <meta name="format-detection" content="telephone=no,address=no,email=no">
           <meta name="viewport" content="width=device-width, initial-scale=1">
-          <link href="/img/favicon.ico" rel="shortcut icon">
+          <link href="/img/icon_16x16.png" rel="shortcut icon">
           <meta name="theme-color" content="#fff">
           <meta property="og:site_name" content="archive">
           <meta property="og:description" content="hrfmmymt による新しいブログ。読んで。">
           <meta property="og:title" content="archive - hrfmmymt&#39;s blog">
           <meta property="og:url" content="">
-          <meta property="og:image" content="/img/icon.png">
+          <meta property="og:image" content="/img/icon_512x512.png">
           <meta property="og:type" content="website">
           <meta property="og:locale" content="ja_JP">
           <meta name="twitter:title" content="archive - hrfmmymt&#39;s blog">
           <meta name="twitter:description" content="hrfmmymt による新しいブログ。読んで。">
-          <meta name="twitter:image" content="/img/icon.png">
+          <meta name="twitter:image" content="/img/icon_512x512.png">
           <meta name="twitter:card" content="summary">
           <meta name="twitter:site" content="hrfmmymt">
           <meta name="twitter:creator" content="hrfmmymt">

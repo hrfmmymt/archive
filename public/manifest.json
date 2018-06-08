@@ -1,20 +1,20 @@
 {
   "short_name": "archive",
   "name": "archive",
+  "display": "standalone",
+  "theme_color": "#fff",
+  "background_color": "#fff",
+  "start_url": "/?launch=homescreen",
   "icons": [
     {
-      "src": "/img/icon_192x192.jpg",
+      "src": "/img/icon_192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/img/icon_512x512.jpg",
+      "src": "/img/icon_512x512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
-  ],
-  "display": "standalone",
-  "theme_color": "#fff",
-  "background_color": "#fff",
-  "start_url": "/?launch=homescreen"
+  ]
 }

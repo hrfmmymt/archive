@@ -19,7 +19,7 @@
     "img-min": "imagemin ./public/img/raw/* --out-dir=./public/img/dist",
     "img-resize": "node ./utils/img-resize.js",
     "img": "npm-run-all -s img-resize img-min",
-    "gen-icons": "node ./utils/gen-icons.js",
+    "icon": "node ./utils/gen-icons.js",
     "lib": "npm-run-all -p cp-io cp-fe cp-wc",
     "cp-io": "cpy ./node_modules/intersection-observer/intersection-observer.js ./public/src/lib",
     "cp-fe": "cpy ./node_modules/whatwg-fetch/fetch.js ./public/src/lib",
