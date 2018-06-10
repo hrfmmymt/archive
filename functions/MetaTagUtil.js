@@ -3,7 +3,7 @@
     class MetaTagUtil {
       constructor() {
         this.metaMap = new Map();
-        this.metaMap.set("/post/20180608", {title:'2018/06/08',subtitle:'今日のやつ',imgsrc:'/img/noimg.jpg'});this.metaMap.set("/post/20180607", {title:'2018/06/07',subtitle:'今日のやつ',imgsrc:'/img/dist/20180607.jpg'});this.metaMap.set("/post/20180606", {title:'preact-cli でポートフォリオサイトを作った',subtitle:'あとで書く',imgsrc:'/img/dist/20180606.png'});this.metaMap.set("/post/20180605", {title:'hello, world!',subtitle:'はじめのごあいさつ',imgsrc:'/img/dist/20180605.jpg'});
+        this.metaMap.set("/post/20180609", {title:'2018/06/09',subtitle:'今日のやつ',imgsrc:'/img/dist/20180609-03.png'});this.metaMap.set("/post/20180608", {title:'2018/06/08',subtitle:'今日のやつ',imgsrc:'/img/noimg.jpg'});this.metaMap.set("/post/20180607", {title:'2018/06/07',subtitle:'今日のやつ',imgsrc:'/img/dist/20180607.jpg'});this.metaMap.set("/post/20180606", {title:'preact-cli でポートフォリオサイトを作った',subtitle:'あとで書く',imgsrc:'/img/dist/20180606.png'});this.metaMap.set("/post/20180605", {title:'hello, world!',subtitle:'はじめのごあいさつ',imgsrc:'/img/dist/20180605.jpg'});
       }
 
       getMetaTag(path) {
