@@ -27,8 +27,9 @@ export class _PostFooter extends App {
       .share-button {
         display: inline-block;
         height: 25px;
-        margin: 2rem 1rem 0 0;
+        margin: 1rem 1rem 0 0;
         width: 25px;
+        line-height: initial;
       }
     `
   }

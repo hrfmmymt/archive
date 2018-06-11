@@ -90,32 +90,93 @@ module.exports = {
       `
     }
   },
-  getErrorTemplate(message) {
+  getErrorTemplate(res) {
     return `
       <!DOCTYPE html>
-      <html lang="ja" prefix="og: http://ogp.me/ns#">
+      <html lang="ja">
         <head>
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1">
-          <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+          <link href="/img/favicon.ico" rel="shortcut icon">
+          <title>${res} | archive - hrfmmymt&#39;s blog</title>
           <style>
             html, body {
               padding: 0px;
               margin: 0px;
             }
-            wrapper {
+
+            .wrapper {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background-color: rgba(0, 0, 0, .2);
+              height: 100vh;
+            }
+
+            h1 {
+              font-size: 13rem;
+              line-height: 1;
+              font-family: 'Futura', sans-serif;
+              font-weight: 700;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              margin: 0;
+              text-decoration: none;
+              color: #fff;
+            }
+
+            h1::before,
+            h1::after {
               display: block;
+              content: '${res}';
+              position: absolute;
+              top: 0;
+              left: 0;
+              height: 100%;
               width: 100%;
-              padding: 0 2rem;
+              opacity: .8;
+            }
+
+            h1::before {
+              color: #0ff;
+              z-index: -1;
+              animation: glitch .3s cubic-bezier(.25, .46, .45, .94) both infinite;
+            }
+
+            h1::after {
+              color: #f0f;
+              z-index: -2;
+              animation: glitch .3s cubic-bezier(.25, .46, .45, .94) reverse both infinite;
+            }
+
+            @keyframes glitch {
+              0% {
+                transform: translate(0)
+              }
+              20% {
+                transform: translate(-5px, 5px)
+              }
+              40% {
+                transform: translate(-5px, -5px)
+              }
+              60% {
+                transform: translate(5px, 5px)
+              }
+              80% {
+                transform: translate(5px, -5px)
+              }
+              to {
+                transform: translate(0)
+              }
             }
           </style>
         </head>
         <body>
-          <wrapper>
-          <div class="error">
-            <h1>404</h1>
+          <div class="wrapper">
+            <h1>${res}</h1>
           </div>
-          </wrapper>
         </body>
       </html>
     `
