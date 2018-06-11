@@ -90,32 +90,111 @@ module.exports = {
       `
     }
   },
-  getErrorTemplate(message) {
+  getErrorTemplate(res) {
     return `
       <!DOCTYPE html>
       <html lang="ja" prefix="og: http://ogp.me/ns#">
         <head>
           <meta charset="UTF-8">
+          <meta name="author" content="hrfmmymt">
+          <meta name="copyright" content="Copyright(c)hrfmmymt. 2018 All Rights Reserved.">
+          <meta name="description" content="hrfmmymt による新しいブログ。読んで。">
+          <meta name="format-detection" content="telephone=no,address=no,email=no">
           <meta name="viewport" content="width=device-width, initial-scale=1">
-          <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+          <link href="/img/favicon.ico" rel="shortcut icon">
+          <meta name="theme-color" content="#fff">
+          <meta property="og:site_name" content="archive">
+          <meta property="og:description" content="hrfmmymt による新しいブログ。読んで。">
+          <meta property="og:title" content="archive - hrfmmymt&#39;s blog">
+          <meta property="og:url" content="https://archive.hrfmmymt.com/${res}">
+          <meta property="og:image" content="/img/icon.png">
+          <meta property="og:type" content="website">
+          <meta property="og:locale" content="ja_JP">
+          <meta name="twitter:title" content="archive - hrfmmymt&#39;s blog">
+          <meta name="twitter:description" content="hrfmmymt による新しいブログ。読んで。">
+          <meta name="twitter:image" content="/img/icon.png">
+          <meta name="twitter:card" content="summary">
+          <meta name="twitter:site" content="hrfmmymt">
+          <meta name="twitter:creator" content="hrfmmymt">
+          <title>${res} | archive - hrfmmymt&#39;s blog</title>
           <style>
             html, body {
               padding: 0px;
               margin: 0px;
             }
-            wrapper {
+
+            .wrapper {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background-color: rgba(0, 0, 0, .2);
+              height: 100vh;
+            }
+
+            h1 {
+              font-size: 13rem;
+              line-height: 1;
+              font-family: 'Futura', sans-serif;
+              font-weight: 700;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              margin: 0;
+              text-decoration: none;
+              color: #fff;
+            }
+
+            h1::before,
+            h1::after {
               display: block;
+              content: '${res}';
+              position: absolute;
+              top: 0;
+              left: 0;
+              height: 100%;
               width: 100%;
-              padding: 0 2rem;
+              opacity: .8;
+            }
+
+            h1::before {
+              color: #0ff;
+              z-index: -1;
+              animation: glitch .3s cubic-bezier(.25, .46, .45, .94) both infinite;
+            }
+
+            h1::after {
+              color: #f0f;
+              z-index: -2;
+              animation: glitch .3s cubic-bezier(.25, .46, .45, .94) reverse both infinite;
+            }
+
+            @keyframes glitch {
+              0% {
+                transform: translate(0)
+              }
+              20% {
+                transform: translate(-5px, 5px)
+              }
+              40% {
+                transform: translate(-5px, -5px)
+              }
+              60% {
+                transform: translate(5px, 5px)
+              }
+              80% {
+                transform: translate(5px, -5px)
+              }
+              to {
+                transform: translate(0)
+              }
             }
           </style>
         </head>
         <body>
-          <wrapper>
-          <div class="error">
-            <h1>404</h1>
+          <div class="wrapper">
+            <h1>${res}</h1>
           </div>
-          </wrapper>
         </body>
       </html>
     `
