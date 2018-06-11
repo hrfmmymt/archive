@@ -2,6 +2,14 @@
   "posts": [
     {
       "format": "",
+      "title": "2018/06/10",
+      "subtitle": "今日のやつ",
+      "date": "2018/06/10",
+      "imgsrc": "/img/dist/20180610-01.jpg",
+      "link": "/post/20180610"
+    },
+    {
+      "format": "",
       "title": "2018/06/09",
       "subtitle": "今日のやつ",
       "date": "2018/06/09",
