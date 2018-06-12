@@ -26,6 +26,7 @@ class PostTemplateBuilder {
             this.postId
           }.md" as="fetch" crossorigin=use-credentials></link>
           <link href="https://fonts.googleapis.com/css?family=Give+You+Glory" rel="stylesheet">
+          <link href="/img/icon_192x192.png" rel="apple-touch-icon">
           ${this.getScripts(this.compatMode)}
           <style>
             * {
