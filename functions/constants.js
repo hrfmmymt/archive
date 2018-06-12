@@ -135,6 +135,10 @@ module.exports = {
               cursor: default;
             }
 
+            .wrapper.isoffline h1 {
+              font-size: 16vw;
+            }
+
             h1::before,
             h1::after {
               display: block;
@@ -205,7 +209,7 @@ module.exports = {
           </style>
         </head>
         <body>
-          <div class="wrapper">
+          <div class="wrapper is${res}">
             <h1>${res}</h1>
             <div class="link">
               <p>go to <a href="/">toppage</a>.</p>
