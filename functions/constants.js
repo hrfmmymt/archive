@@ -135,8 +135,21 @@ module.exports = {
               cursor: default;
             }
 
+            .wrapper.isoffline::after {
+              content: 'But you probably already knew that. I support your act. Continue to throw away your internets, rally in the street.  Maybe it's the just for yours. Maybe your belongings are just this. <3';
+              display: block;
+              position: absolute;
+              bottom: 30%;
+              color: #fff;
+            }
+
             .wrapper.isoffline h1 {
               font-size: 16vw;
+              text-transform: uppercase;
+            }
+
+            .wrapper.isoffline .link {
+              display: none;
             }
 
             h1::before,
