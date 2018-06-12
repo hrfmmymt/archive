@@ -98,6 +98,7 @@ module.exports = {
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1">
           <link href="/img/favicon.ico" rel="shortcut icon">
+          <link href="https://fonts.googleapis.com/css?family=Give+You+Glory" rel="stylesheet">
           <title>${res} | archive - hrfmmymt&#39;s blog</title>
           <style>
             html, body {
@@ -105,26 +106,33 @@ module.exports = {
               margin: 0px;
             }
 
+            body {
+              width: 100%;
+              background-color: #000;
+            }
+
             .wrapper {
               display: flex;
               justify-content: center;
               align-items: center;
-              background-color: rgba(0, 0, 0, .2);
-              height: 100vh;
+              flex-flow: column;
             }
 
             h1 {
-              font-size: 13rem;
+              font-size: 36vw;
+              text-align: center;
               line-height: 1;
               font-family: 'Futura', sans-serif;
               font-weight: 700;
               position: absolute;
-              top: 50%;
+              top: 40%;
               left: 50%;
               transform: translate(-50%, -50%);
               margin: 0;
               text-decoration: none;
               color: #fff;
+              letter-spacing: 1rem;
+              cursor: default;
             }
 
             h1::before,
@@ -171,11 +179,38 @@ module.exports = {
                 transform: translate(0)
               }
             }
+
+            .link {
+              position: absolute;
+              bottom: 10%;
+              color: #fff;
+            }
+
+            .wrapper a {
+              color: #fff;
+            }
+
+            .wrapper a:hover {
+              text-decoration: none;
+            }
+
+            h2 {
+              font-family: 'Give You Glory', cursive;
+              font-weight: 800;
+            }
+
+            h2 a {
+              text-decoration: none;
+            }
           </style>
         </head>
         <body>
           <div class="wrapper">
             <h1>${res}</h1>
+            <div class="link">
+              <p>go to <a href="/">toppage</a>.</p>
+              <h2><a href="/"># archive</a></h2>
+            </div>
           </div>
         </body>
       </html>

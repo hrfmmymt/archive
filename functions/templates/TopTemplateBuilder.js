@@ -68,7 +68,41 @@ class TopTemplateBuilder {
           </style>
         </head>
         <body>
-          <noscript>noscript</noscript>
+          <noscript>
+            <style>
+              .noscript,
+              .noscript img {
+                width: 100vw;
+                height: 100vh;
+              }
+
+              .noscript {
+                position: relative;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+              }
+
+              .noscript p {
+                position: absolute;
+                top: 10%;
+                width: 80%;
+                text-align: center;
+                background: #000;
+                padding: 1rem;
+                color: #fff;
+                font-size: 6vw;
+              }
+
+              .noscript img {
+                z-index: -1;
+              }
+            </style>
+            <div class="noscript">
+              <p>JavaScript required.</p>
+              <img src="https://media.giphy.com/media/mc19PEWvaclAk/giphy.gif" width="100%">
+            </div>
+          </noscript>
           <wrapper>
             <global-header></global-header>
             <div id="dummyHeader"></div>

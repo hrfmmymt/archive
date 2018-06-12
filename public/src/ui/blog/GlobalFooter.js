@@ -142,7 +142,7 @@ export class GlobalFooter extends App {
   getTemplate(data) {
     return `<footer>
               <section>
-                <h2># archive</h2>
+                <h2><a href="/"># archive</a></h2>
                 <small>by hrfmmymt</small>
               </section>
               <div class="link">
