@@ -155,7 +155,7 @@ export class MarkdownParser {
       parseLink() {
         return this.createNewRow(
           /\[(.+?)\]\((https?:\/\/.+?)\)/g,
-          `<a href="$2" target="_blank">$1</a>`
+          `<a href="$2" target="_blank" rel="noopener">$1</a>`
         )
       }
 
