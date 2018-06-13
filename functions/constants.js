@@ -116,6 +116,7 @@ module.exports = {
               justify-content: center;
               align-items: center;
               flex-flow: column;
+              height: 100vh;
             }
 
             h1 {
@@ -124,23 +125,12 @@ module.exports = {
               line-height: 1;
               font-family: 'Futura', sans-serif;
               font-weight: 700;
-              position: absolute;
-              top: 40%;
-              left: 50%;
-              transform: translate(-50%, -50%);
               margin: 0;
               text-decoration: none;
               color: #fff;
               letter-spacing: 1rem;
               cursor: default;
-            }
-
-            .wrapper.isoffline::after {
-              content: 'But you probably already knew that. I support your act. Continue to throw away your internets, rally in the street.  Maybe it's the just for yours. Maybe your belongings are just this. <3';
-              display: block;
-              position: absolute;
-              bottom: 30%;
-              color: #fff;
+              position: relative;
             }
 
             .wrapper.isoffline h1 {
@@ -198,8 +188,7 @@ module.exports = {
             }
 
             .link {
-              position: absolute;
-              bottom: 10%;
+              margin-top: 10rem;
               color: #fff;
             }
 
