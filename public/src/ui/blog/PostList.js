@@ -79,6 +79,11 @@ export class _PostList extends App {
         max-width: 20%;
       }
 
+      :host a archive-img img {
+        max-height: 200px;
+        object-fit: cover;
+      }
+
       :host a .data {
         display: flex;
         flex-flow: column wrap;
@@ -152,7 +157,7 @@ export class _PostList extends App {
           width: 100%;
         }
 
-        :host a.last::after {
+        :host a.post-list-last-img::after {
           display: none;
         }
 
@@ -175,9 +180,7 @@ export class _PostList extends App {
           <archive-img
             data-src="${data.imgsrc}",
             data-alt="image ${data.title}",
-            data-width="${data.format === 'large' ? '2' : '1'}",
-            data-height="${data.format === 'large' ? '1' : '1'}",
-            data-layout="${data.format === 'large' ? '' : 'fixed-layout'}"
+            data-className="${data.className}-img"
           ></archive-img>`}
         <div class="data">
           <h3>${data.title}</h3>

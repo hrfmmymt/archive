@@ -18,7 +18,8 @@ export class _Img extends App {
       width: this.getAttribute('data-width'),
       backgroundColor: this.getAttribute('data-background-color')
         ? this.getAttribute('data-background-color')
-        : '#222'
+        : '#222',
+      className: this.getAttribute('data-className')
     }
     super.render(data)
   }
@@ -30,19 +31,34 @@ export class _Img extends App {
         width: 100%;
       }
 
-      .image-${data.randomId} {
+      :host img {
+        width: 100%;
+      }
+
+      :host .post-list-img img,
+      :host .last-post-list-img img {
+        max-height: 18vh;
+        object-fit: cover;
+      }
+
+      :host .image-${data.randomId} {
         width: 100%;
         background-color: ${data.backgroundColor};
       }
 
-      .image-${data.randomId} img {
+      /* for mobile */
+      @media (max-width: 414px) {
+        :host .post-list-img img,
+        :host .last-post-list-img img {
+          max-height: 24vh;
+        }
       }
     `
   }
 
   getTemplate(data) {
-    return `<div id=${data.randomId} class="image-${
-      data.randomId
+    return `<div id=${data.randomId} class="image-${data.randomId} ${
+      data.className
     } ${this.social}"></div>`
   }
 
@@ -51,11 +67,6 @@ export class _Img extends App {
       const img = document.createElement('img')
       img.src = this.src
       img.alt = this.alt
-      if (this.layout === 'fixed-height') {
-        img.style.height = '100%'
-      } else {
-        img.style.width = '100%'
-      }
       const shadow = this.shadowRoot
       const randomID = this.randomID
       img.onload = function() {

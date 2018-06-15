@@ -50,8 +50,8 @@ export class PostListContainer extends App {
                 index === 0
                   ? 'headline'
                   : index === arr.length - 1
-                    ? 'last'
-                    : ''
+                    ? 'last-post-list'
+                    : 'post-list'
               }
               ></post-list>`
             postList.push(template)
