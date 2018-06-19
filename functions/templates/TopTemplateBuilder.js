@@ -65,6 +65,27 @@ class TopTemplateBuilder {
               width: 100%;
               padding: 0 2rem;
             }
+
+            .mask-header {
+              height: 5rem;
+              background-color: #ddd;
+              line-height: 2;
+              width: 14rem;
+              margin: 2rem 0 2rem;
+            }
+
+            .mask-body {
+              width: 100%;
+              height: 100vh;
+              background-color: #ddd;
+            }
+
+            /* for mobile */
+            @media (max-width: 414px) {
+              .mask-header {
+                margin: 1rem auto 2rem;
+              }
+            }
           </style>
         </head>
         <body>
@@ -105,8 +126,8 @@ class TopTemplateBuilder {
           </noscript>
           <wrapper>
             <global-header></global-header>
-            <div id="dummyHeader"></div>
-            <div id="dummyBody"></div>
+            <div id="maskHeader" class="mask-header"></div>
+            <div id="maskBody" class="mask-body"></div>
             <post-list-container></post-list-container>
           </wrapper>
           <global-footer></global-footer>

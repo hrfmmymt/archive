@@ -89,8 +89,8 @@ export class Post extends App {
       fetch(this.firstFetchEndpoint, { credentials: 'include' }).then(res => {
         res.text().then(text => {
           const markup = new MarkdownParser(text).getMarkUp()
-          const dummy = document.getElementById('dummyPost')
-          if (dummy) dummy.style.display = 'none'
+          const mask = document.getElementById('maskContent')
+          if (mask) mask.style.display = 'none'
           resolve(markup)
         })
       })

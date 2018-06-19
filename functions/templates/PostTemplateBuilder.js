@@ -53,39 +53,65 @@ class PostTemplateBuilder {
               padding: 0 2rem;
             }
 
-            #dummyHeader {
+            .mask-header {
+              height: 5rem;
+              background-color: #ddd;
+              line-height: 2;
+              width: 14rem;
+              margin: 2rem 0 2rem;
             }
 
-            #dummyPost {
+            .mask-content {
+              max-width: 40rem;
+              margin: 2.8rem auto 0;
             }
 
-            #dummyPost .dummyTitle {
-              height:1rem;
-              background-color:#ddd;
+            .mask-title,
+            .mask-subtitle,
+            .mask-date,
+            .mask-line {
+              height: calc(1em + .5vw);
+              background-color: #ddd;
+              font-size: calc(1em + .5vw);
+              line-height: 2;
+              margin: 1rem 0;
             }
-            #dummyPost .dummySubTitle {
-              height:1rem;
-              background-color:#ddd;
+
+            .mask-title {
+              height: calc(1.5rem + .5vw);
+              margin-bottom: 2rem;
             }
-            #dummyPost .dummyDate {
-              height:1rem;
-              background-color:#ddd;
+
+            .mask-subtitle,
+            .mask-date {
+              margin-bottom: 1.4rem;
             }
-            #dummyPost .dummySpacer {
-              height: 1rem;
-            }
-            #dummyPost .dummyLine {
-              height: 1rem;
-              background-color:#ddd;
-            }
-            #dummyPost .dummyImg {
+
+            .mask-img {
               background-color: #ddd;
             }
-            @media (max-width: 699px) {
-              #dummyHeader {
-                  height: 1rem;
+
+            /* for mobile */
+            @media (max-width: 414px) {
+              .mask-header {
+                height: 4rem;
+                margin: 2rem auto 0;
               }
-              #dummyPost {
+
+              .mask-content {
+                margin-top: 2rem;
+              }
+
+              .mask-title {
+                margin-bottom: 2.3rem;
+              }
+
+              .mask-subtitle {
+                margin-bottom: 1.6rem;
+              }
+
+              .mask-date {
+                margin-bottom: 1.83rem;
               }
             }
           </style>
@@ -132,29 +158,28 @@ class PostTemplateBuilder {
           </noscript>
           <wrapper>
             <global-header></global-header>
-            <div id="dummyHeader"></div>
-            <div id="dummyPost">
-              <div class="dummyTitle"></div>
-              <div class="dummySubTitle"></div>
-              <div class="dummyDate"></div>
-              <div class="dummySpacer"></div>
-              <div class="dummyLine"></div>
-              <div class="dummyLine"></div>
-              <div class="dummyLine"></div>
-              <div class="dummyImg"></div>
-              <div class="dummyLine"></div>
-              <div class="dummyLine"></div>
-              <div class="dummyLine"></div>
-              <div class="dummyLine"></div>
-              <div class="dummyLine"></div>
-              <div class="dummyLine"></div>
-              <div class="dummyLine"></div>
-              <div class="dummyLine"></div>
-              <div class="dummyLine"></div>
-              <div class="dummyLine"></div>
-              <div class="dummyLine"></div>
-              <div class="dummyLine"></div>
-              <div class="dummyLine"></div>
+            <div id="maskHeader" class="mask-header"></div>
+            <div id="maskContent" class="mask-content">
+              <div class="mask-title"></div>
+              <div class="mask-subtitle"></div>
+              <div class="mask-date"></div>
+              <div class="mask-line"></div>
+              <div class="mask-line"></div>
+              <div class="mask-line"></div>
+              <div class="mask-img"></div>
+              <div class="mask-line"></div>
+              <div class="mask-line"></div>
+              <div class="mask-line"></div>
+              <div class="mask-line"></div>
+              <div class="mask-line"></div>
+              <div class="mask-line"></div>
+              <div class="mask-line"></div>
+              <div class="mask-line"></div>
+              <div class="mask-line"></div>
+              <div class="mask-line"></div>
+              <div class="mask-line"></div>
+              <div class="mask-line"></div>
+              <div class="mask-line"></div>
             </div>
             <my-post></my-post>
           </wrapper>

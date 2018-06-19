@@ -56,8 +56,8 @@ export class PostListContainer extends App {
               ></post-list>`
             postList.push(template)
           })
-          const dummy = document.getElementById('dummyBody')
-          if (dummy) dummy.style.display = 'none'
+          const mask = document.getElementById('maskBody')
+          if (mask) mask.style.display = 'none'
           resolve(`
             <div class="list">
               ${postList.join('')}
