@@ -53,7 +53,28 @@ class PostTemplateBuilder {
               padding: 0 2rem;
             }
 
-            .mask-header {
+            .skeleton {
+              position: relative;
+            }
+
+            .skeleton::after {
+              display: block;
+              content: '';
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              transform: translateX(-100%);
+              background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4), transparent);
+              animation: loading 1.5s infinite;
+            }
+
+            @keyframes loading {
+              100% {
+                transform: translateX(100%);
+              }
+            }
+
+            .skeleton-header {
               height: 5rem;
               background-color: #ddd;
               line-height: 2;
@@ -61,15 +82,15 @@ class PostTemplateBuilder {
               margin: 2rem 0 2rem;
             }
 
-            .mask-content {
+            .skeleton-content {
               max-width: 40rem;
               margin: 2.8rem auto 0;
             }
 
-            .mask-title,
-            .mask-subtitle,
-            .mask-date,
-            .mask-line {
+            .skeleton-title,
+            .skeleton-subtitle,
+            .skeleton-date,
+            .skeleton-line {
               height: calc(1em + .5vw);
               background-color: #ddd;
               font-size: calc(1em + .5vw);
@@ -77,40 +98,41 @@ class PostTemplateBuilder {
               margin: 1rem 0;
             }
 
-            .mask-title {
+            .skeleton-title {
               height: calc(1.5rem + .5vw);
               margin-bottom: 2rem;
             }
 
-            .mask-subtitle,
-            .mask-date {
+            .skeleton-subtitle,
+            .skeleton-date {
               margin-bottom: 1.4rem;
             }
 
-            .mask-img {
+            .skeleton-bottom {
               background-color: #ddd;
+              height: 40vh;
             }
 
             /* for mobile */
             @media (max-width: 414px) {
-              .mask-header {
+              .skeleton-header {
                 height: 4rem;
                 margin: 2rem auto 0;
               }
 
-              .mask-content {
+              .skeleton-content {
                 margin-top: 2rem;
               }
 
-              .mask-title {
+              .skeleton-title {
                 margin-bottom: 2.3rem;
               }
 
-              .mask-subtitle {
+              .skeleton-subtitle {
                 margin-bottom: 1.6rem;
               }
 
-              .mask-date {
+              .skeleton-date {
                 margin-bottom: 1.83rem;
               }
             }
@@ -158,28 +180,18 @@ class PostTemplateBuilder {
           </noscript>
           <wrapper>
             <global-header></global-header>
-            <div id="maskHeader" class="mask-header"></div>
-            <div id="maskContent" class="mask-content">
-              <div class="mask-title"></div>
-              <div class="mask-subtitle"></div>
-              <div class="mask-date"></div>
-              <div class="mask-line"></div>
-              <div class="mask-line"></div>
-              <div class="mask-line"></div>
-              <div class="mask-img"></div>
-              <div class="mask-line"></div>
-              <div class="mask-line"></div>
-              <div class="mask-line"></div>
-              <div class="mask-line"></div>
-              <div class="mask-line"></div>
-              <div class="mask-line"></div>
-              <div class="mask-line"></div>
-              <div class="mask-line"></div>
-              <div class="mask-line"></div>
-              <div class="mask-line"></div>
-              <div class="mask-line"></div>
-              <div class="mask-line"></div>
-              <div class="mask-line"></div>
+            <div id="skeletonHeader" class="skeleton skeleton-header"></div>
+            <div id="skeletonContent" class="skeleton skeleton-content">
+              <div class="skeleton skeleton-title"></div>
+              <div class="skeleton skeleton-subtitle"></div>
+              <div class="skeleton skeleton-date"></div>
+              <div class="skeleton skeleton-line"></div>
+              <div class="skeleton skeleton-line"></div>
+              <div class="skeleton skeleton-line"></div>
+              <div class="skeleton skeleton-line"></div>
+              <div class="skeleton skeleton-line"></div>
+              <div class="skeleton skeleton-line"></div>
+              <div class="skeleton skeleton-bottom"></div>
             </div>
             <my-post></my-post>
           </wrapper>

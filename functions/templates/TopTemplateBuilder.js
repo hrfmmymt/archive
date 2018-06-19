@@ -66,7 +66,7 @@ class TopTemplateBuilder {
               padding: 0 2rem;
             }
 
-            .mask-header {
+            .skeleton-header {
               height: 5rem;
               background-color: #ddd;
               line-height: 2;
@@ -74,7 +74,7 @@ class TopTemplateBuilder {
               margin: 2rem 0 2rem;
             }
 
-            .mask-body {
+            .skeleton-body {
               width: 100%;
               height: 100vh;
               background-color: #ddd;
@@ -82,7 +82,7 @@ class TopTemplateBuilder {
 
             /* for mobile */
             @media (max-width: 414px) {
-              .mask-header {
+              .skeleton-header {
                 margin: 1rem auto 2rem;
               }
             }
@@ -126,8 +126,8 @@ class TopTemplateBuilder {
           </noscript>
           <wrapper>
             <global-header></global-header>
-            <div id="maskHeader" class="mask-header"></div>
-            <div id="maskBody" class="mask-body"></div>
+            <div id="skeletonHeader" class="skeleton-header"></div>
+            <div id="skeletonBody" class="skeleton-body"></div>
             <post-list-container></post-list-container>
           </wrapper>
           <global-footer></global-footer>

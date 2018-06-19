@@ -51,8 +51,8 @@ export class GlobalHeader extends App {
   }
 
   getTemplate(data) {
-    const mask = document.getElementById('maskHeader')
-    if (mask) mask.style.display = 'none'
+    const skeleton = document.getElementById('skeletonHeader')
+    if (skeleton) skeleton.style.display = 'none'
     return `
       <header>
         <h1><a href="/"># ${data.blogTitle}</a></h1>
