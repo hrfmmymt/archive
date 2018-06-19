@@ -43,7 +43,7 @@ fs.readFile('./public/json/posts.json', (error, data) => {
         <meta name="twitter:description" content="\$\{
           this.metaMap.get(path).subtitle
         \} | archive">
-        <meta name="twitter:image" content="\$\{
+        <meta name="twitter:image" content="https:\/\/archive.hrfmmymt.com\$\{
           this.metaMap.get(path).imgsrc
         \}">
         <meta name="twitter:card" content="summary">

@@ -30,7 +30,7 @@ class TopTemplateBuilder {
           <meta property="og:locale" content="ja_JP">
           <meta name="twitter:title" content="archive - hrfmmymt&#39;s blog">
           <meta name="twitter:description" content="hrfmmymt による新しいブログ。読んで。">
-          <meta name="twitter:image" content="/img/icon.png">
+          <meta name="twitter:image" content="https://archive.hrfmmymt.com/img/icon.png">
           <meta name="twitter:card" content="summary">
           <meta name="twitter:site" content="hrfmmymt">
           <meta name="twitter:creator" content="hrfmmymt">
