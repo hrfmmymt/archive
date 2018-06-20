@@ -55,6 +55,7 @@ class PostTemplateBuilder {
 
             .skeleton {
               position: relative;
+              overflow: hidden;
             }
 
             .skeleton::after {
@@ -121,7 +122,7 @@ class PostTemplateBuilder {
               }
 
               .skeleton-content {
-                margin-top: 2rem;
+                margin-top: 1rem;
               }
 
               .skeleton-title {

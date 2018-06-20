@@ -66,6 +66,28 @@ class TopTemplateBuilder {
               padding: 0 2rem;
             }
 
+            .skeleton {
+              position: relative;
+              overflow: hidden;
+            }
+
+            .skeleton::after {
+              display: block;
+              content: '';
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              transform: translateX(-100%);
+              background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4), transparent);
+              animation: loading 1.5s infinite;
+            }
+
+            @keyframes loading {
+              100% {
+                transform: translateX(100%);
+              }
+            }
+
             .skeleton-header {
               height: 5rem;
               background-color: #ddd;
@@ -126,8 +148,8 @@ class TopTemplateBuilder {
           </noscript>
           <wrapper>
             <global-header></global-header>
-            <div id="skeletonHeader" class="skeleton-header"></div>
-            <div id="skeletonBody" class="skeleton-body"></div>
+            <div id="skeletonHeader" class="skeleton skeleton-header"></div>
+            <div id="skeletonBody" class="skeleton skeleton-body"></div>
             <post-list-container></post-list-container>
           </wrapper>
           <global-footer></global-footer>
