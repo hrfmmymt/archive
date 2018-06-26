@@ -134,6 +134,16 @@ export class MarkdownParser {
         return this
       }
 
+      parseYT() {
+        const regex = /^```yt\s(.+)```$/
+        const replace = `<archive-yt data-ytId=$1></archive-yt>`
+        if (this.row.match(regex)) {
+          this.isBlock = true
+          return this.createNewRow(regex, replace)
+        }
+        return this
+      }
+
       parseImg() {
         const regex = /^!\[(.+?)\]\((.+)\s(\d+)x(\d+)\)$/
         const replace = `<archive-img data-alt="$1" data-src="$2" data-width="$3" data-height="$4"></archive-img>`
@@ -240,6 +250,7 @@ export class MarkdownParser {
       .parseHR()
       .parseShowMore()
       .parseGist()
+      .parseYT()
       .parseBlockQuote()
       .parseImg()
       .parseStrong()

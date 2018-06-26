@@ -6,7 +6,7 @@ export class _Gist extends HTMLElement {
       return new Promise(resolve => {
         const scriptTag = document.createElement('script')
         const CALLBACK_WINDOW_OBJ_NAME = '__GistJsonpCallback'
-        const getCallbackFnName = _ => {
+        const getCallbackFnName = () => {
           return 'cb' + gistId
         }
         if (!window[CALLBACK_WINDOW_OBJ_NAME]) {
@@ -22,6 +22,7 @@ export class _Gist extends HTMLElement {
         shadow.appendChild(scriptTag)
       })
     }
+
     getJsonp(gistId).then(res => {
       fetch(res.stylesheet).then(css => {
         css.text().then(textCSS => {

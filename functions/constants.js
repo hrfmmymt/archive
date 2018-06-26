@@ -63,6 +63,7 @@ module.exports = {
         <link rel="preload" href="/src/ui/blog/Img.js" as="script" crossorigin>
         <link rel="preload" href="/src/ui/blog/MarkdownParser.js" as="script" crossorigin>
         <link rel="preload" href="/src/ui/blog/Gist.js" as="script" crossorigin>
+        <link rel="preload" href="/src/ui/blog/YouTube.js" as="script" crossorigin>
         <link rel="preload" href="/src/ui/blog/PostHeader.js" as="script" crossorigin>
         <link rel="preload" href="/src/ui/blog/PostFooter.js" as="script" crossorigin>
         <link rel="preload" href="/src/ui/blog/TwitterShare.js" as="script" crossorigin>
