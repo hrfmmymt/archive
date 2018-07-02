@@ -36,8 +36,9 @@ class TopTemplateBuilder {
           <meta name="twitter:creator" content="hrfmmymt">
           <title>archive | hrfmmymt&#39;s blog</title>
           <link rel="manifest" href="/manifest.json">
+          <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
           <link rel="preload" href="/json/posts.json" as="fetch" crossorigin=use-credentials></link>
-          <link rel="preload" href="https://fonts.googleapis.com/css?family=Give+You+Glory" as="style">
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Give+You+Glory">
           <link href="/img/icon_192x192.png" rel="apple-touch-icon">
           ${this.getScripts(this.compatMode)}
           <style>

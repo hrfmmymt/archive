@@ -22,11 +22,12 @@ class PostTemplateBuilder {
           <meta name="theme-color" content="#fff">
           ${this.metaTag}
           <link rel="manifest" href="/manifest.json">
+          <link rel="apple-touch-icon" href="/img/icon_192x192.png">
+          <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
           <link rel="preload" href="/posts/${
             this.postId
           }.md" as="fetch" crossorigin=use-credentials></link>
-          <link rel="preload" href="https://fonts.googleapis.com/css?family=Give+You+Glory" as="style">
-          <link href="/img/icon_192x192.png" rel="apple-touch-icon">
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Give+You+Glory">
           ${this.getScripts(this.compatMode)}
           <style>
             * {
