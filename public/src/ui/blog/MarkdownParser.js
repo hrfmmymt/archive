@@ -86,6 +86,36 @@ export class MarkdownParser {
         return this
       }
 
+      parseH4() {
+        const regex = /^####\s(.+)/
+        const replace = `<h4>$1</h4>`
+        if (this.row.match(regex)) {
+          this.isBlock = true
+          return this.createNewRow(regex, replace)
+        }
+        return this
+      }
+
+      parseH5() {
+        const regex = /^#####\s(.+)/
+        const replace = `<h5>$1</h5>`
+        if (this.row.match(regex)) {
+          this.isBlock = true
+          return this.createNewRow(regex, replace)
+        }
+        return this
+      }
+
+      parseH6() {
+        const regex = /^######\s(.+)/
+        const replace = `<h6>$1</h6>`
+        if (this.row.match(regex)) {
+          this.isBlock = true
+          return this.createNewRow(regex, replace)
+        }
+        return this
+      }
+
       parseBr() {
         return this.createNewRow(/  /g, `<br>`)
       }
@@ -246,6 +276,9 @@ export class MarkdownParser {
       .parseH1()
       .parseH2()
       .parseH3()
+      .parseH4()
+      .parseH5()
+      .parseH6()
       .parseBr()
       .parseHR()
       .parseShowMore()
